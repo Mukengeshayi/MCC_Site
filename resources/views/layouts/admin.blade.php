@@ -7,22 +7,27 @@
     <title>Admin - @yield('title')</title>
 
     <!-- AdminLTE CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/admin/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="{{asset('assets/admin/css/adminlte.css')}}">
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> --}}
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('assets/admin/plugins/fontawesome-free/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{asset('assets/admin/plugins/fontawesome-free/css/all.min.css')}}">
     <!-- Summernote -->
-    <link rel="stylesheet" href="{{ asset('assets/admin/plugins/summernote/summernote-bs4.min.css') }}">
+    <link rel="stylesheet" href="{{asset('assets/admin/plugins/summernote/summernote-bs4.min.css')}}">
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="sidebar-mini layout-fixed sidebar-open" style="height: auto;">
+    <div class="preloader flex-column justify-content-center align-items-center" style="height: 0px;">
+    <img class="animation__shake" src="img/logo-mcc.png" alt="MccLogo" height="60" width="60" style="display: none;">
+  </div>
     <div class="wrapper">
         @include('admin.partials.navbar')
         @include('admin.partials.sidebar')
 
-        <div class="content-wrapper">
+        <div class="content-wrapper" style="min-height: 706.4px;">
             @yield('content')
         </div>
 
         @include('admin.partials.footer')
+        <div id="sidebar-overlay"></div>
     </div>
 
     <!-- jQuery -->
