@@ -8,7 +8,6 @@
 
     <!-- AdminLTE CSS -->
     <link rel="stylesheet" href="{{asset('assets/admin/css/adminlte.css')}}">
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> --}}
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset('assets/admin/plugins/fontawesome-free/css/all.min.css')}}">
     <!-- Summernote -->
@@ -31,23 +30,21 @@
     </div>
 
     <!-- jQuery -->
-    <script src="{{ asset('assets/admin/plugins/jquery/jquery.min.js') }}"></script>
+    <script src="{{asset('assets/admin/plugins/jquery/jquery.min.js')}}"></script>
     <!-- Bootstrap 4 -->
-    <script src="{{ asset('assets/admin/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{asset('assets/admin/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <!-- AdminLTE -->
-    <script src="{{ asset('assets/admin/js/adminlte.min.js') }}"></script>
+    <script src="{{asset('assets/admin/js/adminlte.min.js')}}"></script>
     <!-- Summernote -->
-    <script src="{{ asset('assets/admin/plugins/summernote/summernote-bs4.min.js') }}"></script>
+    <script src="{{asset('assets/admin/plugins/summernote/summernote-bs4.min.js')}}"></script>
 
     <script>
         $(function () {
             $('.summernote').summernote({
                 height: 300,
                 toolbar: [
-                    ['style', ['style']],
-                    ['font', ['bold', 'underline', 'clear']],
+                    ['style', ['style', 'bold', 'italic', 'underline', 'clear']],
                     ['para', ['ul', 'ol', 'paragraph']],
-                    ['table', ['table']],
                     ['insert', ['link', 'picture', 'video']]
                 ]
             });

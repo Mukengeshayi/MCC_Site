@@ -6,21 +6,27 @@
     <title>@yield('title') - {{ config('app.name') }}</title>
 
     <!-- Template Front CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/front/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/front/plugins/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/front/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/front/css/main.css') }}">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('assets/front/css/fontawesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/front/plugins/bootstrap-icons/bootstrap-icons.css') }}">
+
 </head>
-<body>
+<body class="index-page" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-delay="0">
     @include('front.partials.header')
 
-    <main>
+    <main class="main">
         @yield('content')
     </main>
 
     @include('front.partials.footer')
 
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     <!-- Template JS -->
+    <!-- Vendor JS Files -->
+    <script src="{{asset('assets/front/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{ asset('assets/front/js/main.js') }}"></script>
 </body>
 </html>
