@@ -3,7 +3,7 @@
 @section('content')
   <section id="hero" class="hero section">
       <div class="hero-container">
-        <img src="assets/img/st.png" class="video-background" alt="">
+        <img src="{{asset('assets/img/st.png') }}" class="video-background" alt="">
         <div class="overlay"></div>
         <div class="container">
           <div class="row align-items-center">
