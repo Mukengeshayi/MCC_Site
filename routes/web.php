@@ -5,11 +5,13 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/', [FrontController::class, 'home'])->name('home');
 Route::get('/about', [FrontController::class, 'about'])->name('about');
+Route::get('/students-life', [FrontController::class, 'studentLife'])->name('students-life');
+
 
 
 Route::middleware('auth')->group(function () {

@@ -10,7 +10,7 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" class="active">Acceuil</a></li>
+          <li><a href="{{ route('home') }}" class="active">Acceuil</a></li>
           <li class="dropdown"><a href="about.html"><span>Ecole</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
                 <li><a href="about.html">À propos</a></li>
@@ -26,7 +26,7 @@
              <li><a href="humanite.html">Humanité : Sciences, Littéraire, Commerciale, Informatique</a></li>
             </ul>
           </li>
-          <li><a href="students-life.html">Vie scolaire</a></li>
+          <li><a href="{{ route('students-life') }}">Vie scolaire</a></li>
           <li><a href="events.html">Galerie</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>

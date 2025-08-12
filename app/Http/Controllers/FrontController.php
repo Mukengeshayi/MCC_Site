@@ -15,4 +15,8 @@ class FrontController extends Controller
     {
         return view('front.about', ['title' => 'À propos']);
     }
+    public function studentLife()
+    {
+        return view('front.students-life', ['title' => 'Vie scolaire']);
+    }
 }
