@@ -432,9 +432,77 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--accent-color);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), black 12%) 0%, var(--accent-color) 50%, color-mix(in srgb, var(--accent-color), white 12%) 100%);
   font-size: 14px;
   position: relative;
+}
+
+/* Newsletter */
+.footer .footer-newsletter {
+  padding: 36px 0 10px 0;
+}
+.footer .footer-newsletter .container {
+  background: color-mix(in srgb, var(--surface-color), transparent 82%);
+  border: 1px solid color-mix(in srgb, var(--contrast-color), transparent 85%);
+  border-radius: 16px;
+  padding: 22px 24px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.footer .footer-newsletter h3 {
+  color: var(--contrast-color);
+  font-family: var(--heading-font);
+  font-size: 20px;
+  margin: 0;
+}
+.footer .footer-newsletter p {
+  color: color-mix(in srgb, var(--contrast-color), black 20%);
+  margin: 0;
+}
+.footer .newsletter-form { width: 100%; }
+.footer .newsletter-form .input-group { display: flex; align-items: stretch; gap: 10px; }
+.footer .newsletter-form .form-control {
+  height: 52px;
+  border-radius: 12px;
+  border: 1px solid color-mix(in srgb, var(--contrast-color), transparent 80%);
+  background: color-mix(in srgb, var(--surface-color), transparent 10%);
+  color: var(--contrast-color);
+  padding: 0 14px;
+}
+.footer .newsletter-form .form-control::placeholder { color: color-mix(in srgb, var(--contrast-color), transparent 45%); }
+.footer .newsletter-form .form-control:focus {
+  outline: none;
+  border-color: color-mix(in srgb, var(--accent-color), white 15%);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+.footer .newsletter-form .btn-subscribe {
+  height: 52px;
+  border: 0;
+  border-radius: 12px;
+  padding: 0 18px;
+  background: linear-gradient(90deg, var(--accent-color) 0%, color-mix(in srgb, var(--accent-color), white 12%) 100%);
+  color: var(--contrast-color);
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 6px 14px color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+.footer .newsletter-form .btn-subscribe:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--accent-color), black 6%) 0%, var(--accent-color) 100%);
+  box-shadow: 0 10px 18px color-mix(in srgb, var(--accent-color), transparent 60%);
+}
+.footer .newsletter-form .btn-subscribe:active { transform: translateY(0); }
+.footer .newsletter-form .form-feedback { margin-top: 8px; min-height: 18px; font-size: 12px; color: color-mix(in srgb, var(--contrast-color), transparent 20%); }
+
+@media (max-width: 576px) {
+  .footer .footer-newsletter .container { padding: 18px; }
+  .footer .newsletter-form .input-group { flex-direction: column; gap: 8px; }
+  .footer .newsletter-form .btn-subscribe { width: 100%; }
 }
 
 .footer .footer-top {

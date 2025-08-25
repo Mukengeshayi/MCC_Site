@@ -11,12 +11,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="{{ route('home') }}" class="active">Acceuil</a></li>
-          <li class="dropdown"><a href="about.html"><span>Ecole</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-                <li><a href="about.html">À propos</a></li>
-                <li><a href="admissions.html">Admissions</a></li>
-            </ul>
-          </li>
+          <li><a href="{{ route('about') }}">À propos</a></li>
           <li class="dropdown"><a href="#"><span>Niveaux d’Enseignement</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
                 <li><a href="{{route('education-levels.preschool')}}">Crèche &amp; Maternelle</a></li>

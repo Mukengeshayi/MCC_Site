@@ -392,20 +392,20 @@
                 </iframe>
             </div>
             <div class="col-lg-6 rounded-lg">
-            <form action="#" method="POST" class="php-email-form" >
+            <form action="{{ route('contact.send') }}" method="POST" class="php-email-form"  >
                 @csrf
                 <div class="row gy-4">
                 <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Entrer le nom" required="">
+                    <input type="text" name="name" class="form-control" placeholder="Entrer votre nom" required="Entrer votre nom">
                 </div>
                 <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Entrer l'adresse mail" required="">
+                    <input type="email" class="form-control" name="email" placeholder="Entrer votre adresse mail" required="Entrer votre adresse mail">
                 </div>
                 <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Entrez l'objet" required="">
+                    <input type="text" class="form-control" name="subject" placeholder="Entrez l'objet de votre message" required="Entrez l'objet de votre message">
                 </div>
                 <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                    <textarea class="form-control" name="message" rows="6" placeholder="Entrez votre Message" required="Entrez votre Message"></textarea>
                 </div>
                 <div class="col-12 text-center">
                     <button type="submit">Envoyez le message</button>

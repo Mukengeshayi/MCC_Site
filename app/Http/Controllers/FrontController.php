@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
+use Illuminate\Mail\Mailable;
+use Illuminate\Support\Facades\Mail;
+
 
 class FrontController extends Controller
 {
@@ -31,5 +35,19 @@ class FrontController extends Controller
     {
         return view('front.highSchool', ['title' => 'Humanités']);
     }
+    public function contact(Request $request)
+    {
+        $validated = $request->validate([
+            'name'    => 'required|string|max:255',
+            'email'   => 'required|email',
+            'subject' => 'required|string|max:255',
+            'message' => 'required|string',
+        ]);
+        Mail::to('info@messiahchristiancollege.com')->send(new ContactMail($validated));
+
+        return back()->with('success', 'Votre message a bien été envoyé !');
+
+    }
+
 
 }
