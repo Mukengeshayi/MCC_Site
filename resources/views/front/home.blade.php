@@ -3,7 +3,12 @@
 @section('content')
   <section id="hero" class="hero section">
       <div class="hero-container">
-        <img src="{{asset('assets/img/st.png') }}" class="video-background" alt="">
+        <img src="{{asset('assets/img/st.png')}}" class="video-background"
+            data-src="{{asset('assets/img/st.png')}}"
+            class="lazy-image"
+            alt="hero"
+            loading="lazy"
+        >
         <div class="overlay"></div>
         <div class="container">
           <div class="row align-items-center">
@@ -158,4 +163,258 @@
         </div>
     </div>
    </section>
+{{--
+    <section class="campus-gallery py-5">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Notre Ecole en Images</h2>
+                <p>Découvrez les espaces d'apprentissage et les installations du Messiah Christian College</p>
+            </div><!-- End Section Title -->
+
+            <div class="gallery-grid" id="campus-gallery">
+                <!-- Salle de classe -->
+                <div class="gallery-item aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+                    <a href="{{asset('assets/img/st.png')}}"
+                    class="glightbox"
+                    data-gallery="campus-gallery"
+                    data-title="Salle de classe moderne"
+                    data-description="Espace d'apprentissage équipé avec les dernières technologies éducatives"
+                    data-type="image">
+                        <img src="{{asset('assets/img/st.png')}}"
+                            alt="Salle de classe moderne"
+                            class="gallery-image"
+                            loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <i class="bi bi-zoom-in"></i>
+                                <span class="overlay-text">Agrandir</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Bibliothèque -->
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="{{asset('assets/img/st.png')}}"
+                    class="glightbox"
+                    data-gallery="campus-gallery"
+                    data-title="Bibliothèque centrale"
+                    data-description="Espace de recherche et d'étude avec plus de 15,000 ouvrages"
+                    data-type="image">
+                        <img src="{{asset('assets/img/st.png')}}"
+                            alt="Bibliothèque centrale"
+                            class="gallery-image"
+                            loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <i class="bi bi-zoom-in"></i>
+                                <span class="overlay-text">Agrandir</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Laboratoire informatique -->
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <a href="{{asset('assets/img/st.png')}}"
+                    class="glightbox"
+                    data-gallery="campus-gallery"
+                    data-title="Laboratoire informatique"
+                    data-description="Équipements de pointe pour l'apprentissage des technologies"
+                    data-type="image">
+                        <img src="{{asset('assets/img/st.png')}}"
+                            alt="Laboratoire informatique"
+                            class="gallery-image"
+                            loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <i class="bi bi-zoom-in"></i>
+                                <span class="overlay-text">Agrandir</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Terrain de sport -->
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                    <a href="{{asset('assets/img/st.png')}}"
+                    class="glightbox"
+                    data-gallery="campus-gallery"
+                    data-title="Installations sportives"
+                    data-description="Terrain multifonctionnel pour tous les sports"
+                    data-type="image">
+                        <img src="{{asset('assets/img/st.png')}}"
+                            alt="Installations sportives"
+                            class="gallery-image"
+                            loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <i class="zoom-icon">🔍</i>
+                                <span class="overlay-text">Agrandir</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Cafétéria -->
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+                    <a href="{{asset('assets/img/st.png')}}"
+                    class="glightbox"
+                    data-gallery="campus-gallery"
+                    data-title="Espace de restauration"
+                    data-description="Cafétéria moderne avec vue sur le campus"
+                    data-type="image">
+                        <img src="{{asset('assets/img/st.png')}}"
+                            alt="Espace de restauration"
+                            class="gallery-image"
+                            loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <i class="bi bi-zoom-in"></i>
+                                <span class="overlay-text">Agrandir</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Auditorium -->
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
+                    <a href="{{asset('assets/img/st.png')}}"
+                    class="glightbox"
+                    data-gallery="campus-gallery"
+                    data-title="Auditorium principal"
+                    data-description="Salle de spectacle et de conférences de 300 places"
+                    data-type="image">
+                        <img src="{{asset('assets/img/st.png')}}"
+                            alt="Auditorium principal"
+                            class="gallery-image"
+                            loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <i class="bi bi-zoom-in"></i>
+                                <span class="overlay-text">Agrandir</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bouton pour voir plus -->
+            <div class="text-center mt-2 " data-aos="fade-up" data-aos-delay="500">
+                <a href="#" class="btn btn-outline-primary btn-lg">
+                    <i class="bi bi-images me-2"></i>
+                    Voir toutes nos installations
+                </a>
+            </div>
+        </div>
+    </section> --}}
+    <section id="contact" class="contact section">
+        <div class="student-gallery mt-5 pt-3 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+           <div class="container section-title" data-aos="fade-up">
+                <h2>Notre Ecole en Images</h2>
+                <p>Découvrez les espaces d'apprentissage et les installations du Messiah Christian College</p>
+            </div><!-- End Section Title -->
+
+          <div class="row g-3">
+            <div class="col-md-4 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+              <a href="assets/img/st.png" class="gallery-item glightbox">
+                <img src="assets/img/st.png" class="img-fluid" loading="lazy" alt="Student Life">
+                <div class="gallery-overlay">
+                  <i class="bi bi-plus-circle"></i>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
+              <a href="assets/img/st.png" class="gallery-item glightbox">
+                <img src="assets/img/st.png" class="img-fluid" loading="lazy" alt="Student Life">
+                <div class="gallery-overlay">
+                  <i class="bi bi-plus-circle"></i>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
+              <a href="assets/img/st.png" class="gallery-item glightbox">
+                <img src="assets/img/st.png" class="img-fluid" loading="lazy" alt="Student Life">
+                <div class="gallery-overlay">
+                  <i class="bi bi-plus-circle"></i>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4 aos-init" data-aos="zoom-in" data-aos-delay="400">
+              <a href="assets/img/st.png" class="gallery-item glightbox">
+                <img src="assets/img/st.png" class="img-fluid" loading="lazy" alt="Student Life">
+                <div class="assets/img/st.png">
+                  <i class="bi bi-plus-circle"></i>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4 aos-init" data-aos="zoom-in" data-aos-delay="500">
+              <a href="assets/img/st.png" class="gallery-item glightbox">
+                <img src="assets/img/st.png" class="img-fluid" loading="lazy" alt="Student Life">
+                <div class="gallery-overlay">
+                  <i class="bi bi-plus-circle"></i>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4 aos-init" data-aos="zoom-in" data-aos-delay="600">
+              <a href="assets/img/st.png" class="gallery-item glightbox">
+                <img src="assets/img/st.png" class="img-fluid" loading="lazy" alt="Student Life">
+                <div class="gallery-overlay">
+                  <i class="bi bi-plus-circle"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section id="contact" class="contact section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Nous sommes à votre écoute pour toute question ou demande d'information</p>
+        </div><!-- End Section Title -->
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+            <div class="col-lg-6 rounded-lg">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3599.7381248561605!2d15.262593078785999!3d-4.440845467880991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2scd!4v1756109732722!5m2!1sen!2scd"
+                    width="600"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div class="col-lg-6 rounded-lg">
+            <form action="#" method="POST" class="php-email-form" >
+                @csrf
+                <div class="row gy-4">
+                <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Entrer le nom" required="">
+                </div>
+                <div class="col-md-6 ">
+                    <input type="email" class="form-control" name="email" placeholder="Entrer l'adresse mail" required="">
+                </div>
+                <div class="col-12">
+                    <input type="text" class="form-control" name="subject" placeholder="Entrez l'objet" required="">
+                </div>
+                <div class="col-12">
+                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit">Envoyez le message</button>
+                </div>
+                </div>
+            </form>
+            </div><!-- End Contact Form -->
+        </div>
+        </div>
+    </section><!-- /Contact Section -->
+
 @endsection

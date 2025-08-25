@@ -12,49 +12,29 @@
 
     <!-- Template Front CSS -->
     <link rel="stylesheet" href="{{asset('assets/front/plugins/bootstrap/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{asset('assets/front/css/style.css') }}">
     <link rel="stylesheet" href="{{asset('assets/front/css/main.css') }}">
-    <link rel="stylesheet" href="{{asset('assets/front/aos/aos.css') }}">
+    <link rel="stylesheet" href="{{asset('assets/front/plugins/aos/aos.css') }}">
+    <link rel="stylesheet" href="{{asset('assets/front/plugins/swiper/swiper-bundle.min.css') }}">
 
+    <link rel="stylesheet" href="{{asset('assets/front/plugins/glightbox/css/glightbox.css') }}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset('assets/front/plugins/bootstrap-icons/bootstrap-icons.css') }}">
 
 </head>
 <body class="index-page" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-delay="0">
     @include('front.partials.header')
-
     <main class="main">
         @yield('content')
     </main>
-
     @include('front.partials.footer')
 
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Template JS -->
-    <!-- Vendor JS Files -->
     <script src="{{asset('assets/front/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('assets/front/plugins/aos/aos.js')}}"></script>
-    <script src="{{ asset('assets/front/js/main.js') }}"></script>
-
-    <script>
-        // Initialiser AOS après le chargement complet de la page
-        document.addEventListener('DOMContentLoaded', function() {
-            AOS.init({
-                duration: 600,
-                easing: 'ease-in-out',
-                once: true,
-                mirror: false,
-                offset: 120,
-                delay: 0
-            });
-        });
-
-        // Rafraîchir AOS lors du changement de page (pour SPA)
-        window.addEventListener('load', function() {
-            AOS.refresh();
-        });
-    </script>
+    <script src="{{asset('assets/front/plugins/swiper/swiper-bundle.min.js')}}"></script>
+    <script src="{{asset('assets/front/plugins/glightbox/js/glightbox.min.js')}}"></script>
+    <script src="{{asset('assets/front/js/main.js')}}"></script>
 </body>
 </html>

@@ -15,7 +15,6 @@
             <ul>
                 <li><a href="about.html">À propos</a></li>
                 <li><a href="admissions.html">Admissions</a></li>
-                <li><a href="academics.html">Programmes académiques</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Niveaux d’Enseignement</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>

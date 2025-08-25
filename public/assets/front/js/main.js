@@ -165,8 +165,46 @@
   /**
    * Initiate glightbox
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
+//   const glightbox = GLightbox({
+//     selector: '.glightbox'
+//   });
+
+
+  // Configuration GLightbox personnalisée
+const lightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true,
+    preload: false,
+    svg: {
+        close: '<svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>',
+        next: '<svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>',
+        prev: '<svg viewBox="0 0 24 24"><path d="M15.41 7.41L10.83 12l4.58 4.59L14 18l-6-6 6-6 1.41 1.41z"/></svg>'
+    },
+    plyr: {
+        css: 'https://cdn.plyr.io/3.6.8/plyr.css',
+        js: 'https://cdn.plyr.io/3.6.8/plyr.js'
+    },
+    onOpen: () => {
+        // Callback quand la lightbox s'ouvre
+        document.body.style.overflow = 'hidden';
+    },
+    onClose: () => {
+        // Callback quand la lightbox se ferme
+        document.body.style.overflow = 'auto';
+    }
+});
+
+// Gestion des erreurs d'images
+lightbox.on('slide_before_load', (slide) => {
+    const img = slide.slide.querySelector('img');
+    if (img) {
+        img.onerror = function() {
+            this.src = '{{asset("assets/img/placeholder.jpg")}}';
+            this.alt = 'Image non disponible';
+        };
+    }
+});
 
 })();
