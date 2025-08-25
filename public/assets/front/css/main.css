@@ -139,6 +139,8 @@ h6 {
   --background-color: rgba(255, 255, 255, 0);
   --default-color: #ffffff;
   --heading-color: #ffffff;
+  --nav-color: #ffffff;
+  --nav-hover-color: #f2b833;
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 15px 0;
@@ -169,9 +171,11 @@ h6 {
 }
 
 .scrolled .header {
-    --background-color: #fff;
+  --background-color: #fff;
   --default-color: #0b58dd;
   --heading-color: #0b58dd;
+  --nav-color: #0b58dd;
+  --nav-hover-color: #f2b833;
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
@@ -181,6 +185,8 @@ h6 {
   --background-color: #fff;
   --default-color: #0b58dd;
   --heading-color: #0b58dd;
+  --nav-color: #0b58dd;
+  --nav-hover-color: #f2b833;
   /* --background-color: rgba(0, 0, 0, 0.7); */
 }
 
@@ -8398,15 +8404,17 @@ section,
 .school-line1 {
   font-size: 20px;
   font-weight: bold;
-  color: #ffffff; /* bleu foncé */
+  color: var(--heading-color); /* Utilise la variable du header au lieu d'une couleur fixe */
   text-transform: uppercase;
+  transition: color 0.5s; /* Ajoute une transition pour un changement fluide */
 }
 
 .school-line2 {
   font-size: 14px;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--heading-color); /* Utilise la variable du header au lieu d'une couleur fixe */
   letter-spacing: 0.5px;
+  transition: color 0.5s; /* Ajoute une transition pour un changement fluide */
 }
 
 .btn-blue {

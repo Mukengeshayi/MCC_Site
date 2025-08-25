@@ -9,7 +9,15 @@
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
     if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+
+    const isScrolled = window.scrollY > 100;
+    if (isScrolled) {
+      selectBody.classList.add('scrolled');
+      console.log('Scrolled: Header should be white, text should be blue');
+    } else {
+      selectBody.classList.remove('scrolled');
+      console.log('Not scrolled: Header should be transparent, text should be white');
+    }
   }
 
   document.addEventListener('scroll', toggleScrolled);
