@@ -11,7 +11,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [FrontController::class, 'home'])->name('home');
 Route::get('/about', [FrontController::class, 'about'])->name('about');
 Route::get('/students-life', [FrontController::class, 'studentLife'])->name('students-life');
+Route::get('/students-life', [FrontController::class, 'studentLife'])->name('students-life');
+Route::get('education-levels/preschool', [FrontController::class, 'preschool'])->name('education-levels.preschool');
+Route::get('education-levels/primary-shool', [FrontController::class, 'primary'])->name('education-levels.primary');
+Route::get('education-levels/high-School', [FrontController::class, 'highSchool'])->name('education-levels.high-school');
 
+// Route de test pour AOS
+Route::get('/test-aos', function () {
+    return view('test-aos');
+})->name('test-aos');
 
 
 Route::middleware('auth')->group(function () {

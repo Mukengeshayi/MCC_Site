@@ -15,8 +15,8 @@
 :root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #004298; /* Color for headings, subheadings and title throughout the website */
-  --accent-color:#004298; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --heading-color: #1270b6; /* 004298 Color for headings, subheadings and title throughout the website */
+  --accent-color:#1270b6; /* 004298 Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -24,7 +24,7 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #012970;  /* The default color of the main navmenu links */
-  --nav-hover-color: #fc0808; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #e5454f; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -153,6 +153,7 @@ h6 {
 .header .logo img {
   max-height: 43px;
   margin-right: 8px;
+
 }
 
 .header .logo i {
@@ -731,12 +732,11 @@ section,
 
 .hero .hero-container {
   position: relative;
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 180px 0 80px 0;
+  padding: 160px 0 80px 0;
 }
-
 .hero .hero-container .video-background {
   position: absolute;
   top: 0;
@@ -935,6 +935,171 @@ section,
     text-align: center;
   }
 }
+
+
+.hero .hero-container .hero-content .announcement p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.hero .highlights-container {
+  margin-top: -60px;
+  position: relative;
+  z-index: 10;
+}
+
+.hero .highlights-container .highlight-item {
+  background-color: var(--surface-color);
+  border-radius: 8px;
+  padding: 30px 25px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.hero .highlights-container .highlight-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.hero .highlights-container .highlight-item .icon {
+  font-size: 2.5rem;
+  height: 70px;
+  width: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+}
+
+.hero .highlights-container .highlight-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero .highlights-container .highlight-item p {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.hero .event-banner {
+  background-color: color-mix(in srgb, var(--heading-color), transparent 90%);
+  padding: 25px 0;
+  margin-top: 40px;
+}
+.hero .event-banner .event-date {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero .event-banner .event-date .month {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero .event-banner .event-date .day {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero .event-banner h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.hero .event-banner p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.hero .event-banner .btn-register {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.hero .event-banner .btn-register:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .hero .event-banner .btn-register {
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .event-banner {
+    text-align: center;
+  }
+
+  .hero .event-banner .event-date {
+    margin: 0 auto 15px;
+    max-width: 100px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .hero .event-ticker {
   background-color: var(--accent-color);
@@ -8266,7 +8431,7 @@ section,
 }
 
 
-.footer a {
+/* .footer a {
   color: #fff;
   transition: color 0.3s;
 }
@@ -8288,5 +8453,134 @@ section,
 .footer .social-links a:hover {
   background: #f2b833;
   color: var(--accent-color);
+} *
+
+
+
+/* Section des cartes fonctionnalités */
+.features-cards-section {
+  padding: 120px 0 80px;
+  background-color: #f9fafc;
+  position: relative;
+  z-index: 2;
 }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.features-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  text-align: center;
+  border-top: 4px solid var(--accent-color);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.1) 0%, rgba(var(--accent-rgb), 0.2) 100%);
+  border-radius: 50%;
+  color: var(--accent-color);
+  font-size: 2rem;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.feature-card p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+.feature-card-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.feature-card-link:hover {
+  color: color-mix(in srgb, var(--accent-color), black 20%);
+  transform: translateX(5px);
+}
+
+.feature-card-link::after {
+  content: "→";
+  margin-left: 5px;
+  transition: margin 0.3s ease;
+}
+
+.feature-card-link:hover::after {
+  margin-left: 10px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .features-cards-section {
+    padding: 100px 0 60px;
+  }
+
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-cards-container {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .feature-card {
+    padding: 30px 25px;
+  }
+}
+
+
+
+
+
+
 

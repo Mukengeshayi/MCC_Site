@@ -20,10 +20,10 @@
           </li>
           <li class="dropdown"><a href="#"><span>Niveaux d’Enseignement</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-                <li><a href="creche-maternelle.html">Crèche &amp; Maternelle</a></li>
-                <li><a href="primaire.html">Primaire</a></li>
-                <li><a href="secondaire.html">Secondaire (7ème EB – 8ème CTEB)</a></li>
-             <li><a href="humanite.html">Humanité : Sciences, Littéraire, Commerciale, Informatique</a></li>
+                <li><a href="{{route('education-levels.preschool')}}">Crèche &amp; Maternelle</a></li>
+                <li><a href="{{route('education-levels.primary')}}">Primaire</a></li>
+                <li><a href="{{route('education-levels.high-school')}}">Secondaire (7ème EB – 8ème CTEB)</a></li>
+             <li><a href="{{route('education-levels.high-school')}}">Humanité : Sciences, Littéraire, Commerciale, Informatique</a></li>
             </ul>
           </li>
           <li><a href="{{ route('students-life') }}">Vie scolaire</a></li>
