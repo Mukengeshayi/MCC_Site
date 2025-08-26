@@ -397,15 +397,20 @@
                 <div class="row gy-4">
                 <div class="col-md-6">
                     <input type="text" name="name" class="form-control" placeholder="Entrer votre nom" required="Entrer votre nom">
+                     @error('name') <small class="text-danger">{{ $message }}</small> @enderror
                 </div>
                 <div class="col-md-6 ">
                     <input type="email" class="form-control" name="email" placeholder="Entrer votre adresse mail" required="Entrer votre adresse mail">
+                     @error('email') <small class="text-danger">{{ $message }}</small> @enderror
                 </div>
                 <div class="col-12">
                     <input type="text" class="form-control" name="subject" placeholder="Entrez l'objet de votre message" required="Entrez l'objet de votre message">
+                     @error('subject') <small class="text-danger">{{ $message }}</small> @enderror
                 </div>
                 <div class="col-12">
                     <textarea class="form-control" name="message" rows="6" placeholder="Entrez votre Message" required="Entrez votre Message"></textarea>
+                    @error('message') <small class="text-danger">{{ $message }}</small> @enderror
+
                 </div>
                 <div class="col-12 text-center">
                     <button type="submit">Envoyez le message</button>
