@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ContactMail;
+use App\Models\Newsletter;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Mailable;
 use Illuminate\Support\Facades\Mail;
-
+use League\CommonMark\Node\Inline\Newline;
 
 class FrontController extends Controller
 {
@@ -47,6 +48,17 @@ class FrontController extends Controller
 
         return back()->with('success', 'Votre message a bien été envoyé !');
 
+
+    }
+    public function newsletter(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email|unique:newsletters,email'
+        ]);
+
+        Newsletter::create(['email' => $request->email]);
+
+        return back()->with('success', 'Merci pour votre abonnement à notre newsletter !');
     }
 
 

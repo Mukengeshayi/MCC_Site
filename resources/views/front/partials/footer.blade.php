@@ -129,13 +129,18 @@
             <div class="col-lg-4 col-md-6 footer-newsletter">
                 <h4>Notre Newsletter</h4>
                 <p>Abonnez-vous et recevez les dernières nouvelles et annonces.</p>
-                <form class="newsletter-form" action="#" method="post">
+                <form class="newsletter-form" action="{{ route('newsletter.store') }}" method="POST">
                     @csrf
                     <div class="input-group">
                         <input type="email" name="email" class="form-control" placeholder="Votre adresse e-mail" aria-label="Votre adresse e-mail" required>
                         <button class="btn-subscribe" type="submit">S'abonner <i class="bi bi-send ms-2"></i></button>
                     </div>
-                    <div class="form-feedback" role="status" aria-live="polite"></div>
+                    @if(session('success'))
+                        <div class="form-feedback text-success">{{ session('success') }}</div>
+                    @endif
+                    @error('email')
+                        <div class="form-feedback text-danger">{{ $message }}</div>
+                    @enderror
                 </form>
             </div>
         </div>

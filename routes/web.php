@@ -16,6 +16,8 @@ Route::get('education-levels/preschool', [FrontController::class, 'preschool'])-
 Route::get('education-levels/primary-shool', [FrontController::class, 'primary'])->name('education-levels.primary');
 Route::get('education-levels/high-School', [FrontController::class, 'highSchool'])->name('education-levels.high-school');
 Route::post('/contact', [FrontController::class, 'contact'])->name('contact.send');
+Route::post('/newsletter', [FrontController::class, 'newsletter'])->name('newsletter.store');
+
 
 
 
