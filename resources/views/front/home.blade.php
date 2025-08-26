@@ -309,7 +309,7 @@
             </div>
         </div>
     </section> --}}
-    <section id="contact" class="contact section">
+    {{-- <section id="contact" class="contact section">
         <div class="student-gallery mt-5 pt-3 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
            <div class="container section-title" data-aos="fade-up">
                 <h2>Notre Ecole en Images</h2>
@@ -372,54 +372,113 @@
             </div>
           </div>
         </div>
-    </section>
-    <section id="contact" class="contact section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Nous sommes à votre écoute pour toute question ou demande d'information</p>
-        </div><!-- End Section Title -->
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-            <div class="col-lg-6 rounded-lg">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3599.7381248561605!2d15.262593078785999!3d-4.440845467880991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2scd!4v1756109732722!5m2!1sen!2scd"
-                    width="600"
-                    height="450"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-            <div class="col-lg-6 rounded-lg">
-            <form action="{{ route('contact.send') }}" method="POST" class="php-email-form"  >
-                @csrf
-                <div class="row gy-4">
-                <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Entrer votre nom" required="Entrer votre nom">
-                     @error('name') <small class="text-danger">{{ $message }}</small> @enderror
-                </div>
-                <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Entrer votre adresse mail" required="Entrer votre adresse mail">
-                     @error('email') <small class="text-danger">{{ $message }}</small> @enderror
-                </div>
-                <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Entrez l'objet de votre message" required="Entrez l'objet de votre message">
-                     @error('subject') <small class="text-danger">{{ $message }}</small> @enderror
-                </div>
-                <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Entrez votre Message" required="Entrez votre Message"></textarea>
-                    @error('message') <small class="text-danger">{{ $message }}</small> @enderror
+    </section> --}}
 
+    <section id="contact" class="contact section">
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p>Pour toute question, inscription ou demande d’informations, notre équipe est à votre disposition. N’hésitez pas à nous écrire ou à nous appeler.</p>
+        </div><!-- End Section Title -->
+      <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+        <div class="contact-main-wrapper">
+          <div class="map-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3599.7381248561605!2d15.262593078785999!3d-4.440845467880991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2scd!4v1756109732722!5m2!1sen!2scd"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <div class="contact-content">
+            <div class="contact-cards-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+              <div class="contact-card">
+                <div class="icon-box">
+                  <i class="bi bi-geo-alt"></i>
                 </div>
-                <div class="col-12 text-center">
-                    <button type="submit">Envoyez le message</button>
+                <div class="contact-text">
+                  <h4>Adresse</h4>
+                  <p>146-150, Route Bypass, Q/ Pumbu, C/ Mont-Ngafula</p>
                 </div>
+              </div>
+
+              <div class="contact-card">
+                <div class="icon-box">
+                  <i class="bi bi-envelope"></i>
                 </div>
-            </form>
-            </div><!-- End Contact Form -->
+                <div class="contact-text">
+                  <h4>Email</h4>
+                  <p>info@messiahchristiancollege.org</p>
+                </div>
+              </div>
+
+              <div class="contact-card">
+                <div class="icon-box">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Téléphone</h4>
+                  <p>+243 810 000 971</p>
+                </div>
+              </div>
+
+              <div class="contact-card">
+                <div class="icon-box">
+                  <i class="bi bi-clock"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Heures d'ouverture</h4>
+                  <p>Lundi - Samedi : 7h00 - 18h00</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+              <h3>Entrer en contact</h3>
+              <p>N’hésitez pas à nous écrire pour toute question ou demande d’information. Nous vous répondrons dans les plus brefs délais.</p>
+
+              <form action="{{ route('contact.send') }}" method="POST" class="php-email-form">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Entrer votre nom" required="">
+                    @error('name') <small class="text-danger">{{ $message }}</small> @enderror
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Entrer votre e-mail" required="">
+                    @error('email') <small class="text-danger">{{ $message }}</small> @enderror
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Entrer votre objet" required="">
+                    @error('subject') <small class="text-danger">{{ $message }}</small> @enderror
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Entrez votre message" required=""></textarea>
+                    @error('message') <small class="text-danger">{{ $message }}</small> @enderror
+                </div>
+
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+
+                <div class="form-submit">
+                  <button type="submit">Envoyez message</button>
+                  <div class="social-links">
+                    <a href="https://www.tiktok.com/@messiah.christian" class="social-link tiktok"><i class="bi bi-tiktok"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61578662350805"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/ecolemessiahchristianmcc1?igsh=N3IybTFicHlkc2V4"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7358932188370726913"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-        </div>
-    </section><!-- /Contact Section -->
+      </div>
+    </section>
 
 @endsection
