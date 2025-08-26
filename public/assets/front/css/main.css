@@ -432,7 +432,7 @@ h6 {
 --------------------------------------------------------------*/
 /* Modern Footer Styles */
 .modern-footer {
-    background: linear-gradient(135deg, #0d306c 0%, #2d3a4d 100%);
+    background: linear-gradient(135deg, #1270b6 0%, #2d3a4d 100%);
     color: #f5f5f5;
     padding-top: 40px;
     padding-bottom: 20px;
@@ -451,7 +451,7 @@ h6 {
 }
 
 .modern-footer .school-line1 {
-    color: #f2b833;
+    color: #f8f7f5;
     font-size: 24px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -8607,25 +8607,81 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+.contact {
+  position: relative;
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--background-color), #f8fafc 20%) 0%,
+    color-mix(in srgb, var(--background-color), #e2e8f0 10%) 100%);
+  overflow: hidden;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23e2e8f0" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23e2e8f0" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23e2e8f0" opacity="0.05"/><circle cx="10" cy="60" r="0.5" fill="%23e2e8f0" opacity="0.05"/><circle cx="90" cy="40" r="0.5" fill="%23e2e8f0" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact .container {
+  position: relative;
+  z-index: 1;
+}
+
 .contact .contact-main-wrapper {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: 40px;
+  padding: 20px 0;
 }
 
 @media (min-width: 992px) {
   .contact .contact-main-wrapper {
     grid-template-columns: 45% 55%;
-    min-height: 600px;
+    min-height: 700px;
+    gap: 60px;
   }
 }
 
 .contact .map-wrapper {
   height: 300px;
   width: 100%;
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact .map-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg,
+    color-mix(in srgb, var(--accent-color), transparent 95%) 0%,
+    transparent 50%,
+    color-mix(in srgb, var(--accent-color), transparent 95%) 100%);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contact .map-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.contact .map-wrapper:hover::before {
+  opacity: 1;
 }
 
 @media (min-width: 992px) {
@@ -8645,7 +8701,7 @@ section,
 .contact .contact-cards-container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 15px;
+  gap: 20px;
 }
 
 @media (min-width: 576px) {
@@ -8655,35 +8711,95 @@ section,
 }
 
 .contact .contact-card {
-  background-color: var(--surface-color);
-  padding: 20px;
-  border-radius: 12px;
+  background: linear-gradient(135deg,
+    var(--surface-color) 0%,
+    color-mix(in srgb, var(--surface-color), #ffffff 5%) 100%);
+  padding: 25px;
+  border-radius: 16px;
   display: flex;
   align-items: flex-start;
-  gap: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 95%);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact .contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg,
+    var(--accent-color) 0%,
+    color-mix(in srgb, var(--accent-color), #ffffff 30%) 50%,
+    var(--accent-color) 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 .contact .contact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+}
+
+.contact .contact-card:hover::before {
+  transform: scaleX(1);
 }
 
 .contact .contact-card .icon-box {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   flex-shrink: 0;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  border-radius: 10px;
+  background: linear-gradient(135deg,
+    var(--accent-color) 0%,
+    color-mix(in srgb, var(--accent-color), #ffffff 20%) 100%);
+  border-radius: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+.contact .contact-card .icon-box::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color), #ffffff 30%));
+  border-radius: 18px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contact .contact-card:hover .icon-box {
+  transform: rotate(5deg) scale(1.1);
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--accent-color), transparent 60%);
+}
+
+.contact .contact-card:hover .icon-box::before {
+  opacity: 1;
 }
 
 .contact .contact-card .icon-box i {
-  font-size: 22px;
-  color: var(--accent-color);
+  font-size: 24px;
+  color: var(--contrast-color);
+  transition: transform 0.3s ease;
+}
+
+.contact .contact-card:hover .icon-box i {
+  transform: scale(1.1);
 }
 
 .contact .contact-card .contact-text h4 {
@@ -8701,30 +8817,67 @@ section,
 }
 
 .contact .contact-form-container {
-  background-color: var(--surface-color);
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg,
+    var(--surface-color) 0%,
+    color-mix(in srgb, var(--surface-color), #ffffff 3%) 100%);
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 95%);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact .contact-form-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%,
+    color-mix(in srgb, var(--accent-color), transparent 98%) 0%,
+    transparent 50%),
+    radial-gradient(circle at 80% 20%,
+    color-mix(in srgb, var(--accent-color), transparent 98%) 0%,
+    transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact .contact-form-container > * {
+  position: relative;
+  z-index: 1;
 }
 
 .contact .contact-form-container h3 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: var(--heading-color);
   position: relative;
-  padding-left: 15px;
+  padding-left: 20px;
+  background: linear-gradient(135deg,
+    var(--heading-color) 0%,
+    color-mix(in srgb, var(--heading-color), var(--accent-color) 20%) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .contact .contact-form-container h3:before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0;
-  height: 100%;
-  width: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 5px;
+  background: linear-gradient(135deg,
+    var(--accent-color) 0%,
+    color-mix(in srgb, var(--accent-color), #ffffff 30%) 100%);
+  border-radius: 3px;
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--accent-color), transparent 70%);
 }
 
 .contact .contact-form-container>p {
@@ -8736,18 +8889,24 @@ section,
 
 .contact .contact-form-container .php-email-form .form-control {
   height: auto;
-  padding: 14px 20px;
-  border-radius: 10px;
-  background-color: color-mix(in srgb, var(--background-color), #f5f8fd 30%);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  padding: 16px 24px;
+  border-radius: 12px;
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--background-color), #f8fafc 20%) 0%,
+    color-mix(in srgb, var(--background-color), #ffffff 10%) 100%);
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
   color: var(--default-color);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 15px;
+  position: relative;
 }
 
 .contact .contact-form-container .php-email-form .form-control:focus {
-  background-color: var(--surface-color);
+  background: var(--surface-color);
   border-color: var(--accent-color);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 85%);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-color), transparent 85%),
+              0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
 }
 
 .contact .contact-form-container .php-email-form .form-control::placeholder {
@@ -8775,21 +8934,46 @@ section,
 }
 
 .contact .contact-form-container .php-email-form button {
-  background-color: var(--accent-color);
+  background: linear-gradient(135deg,
+    var(--accent-color) 0%,
+    color-mix(in srgb, var(--accent-color), #000 10%) 100%);
   color: var(--contrast-color);
   border: none;
-  padding: 12px 28px;
+  padding: 16px 32px;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0.5px;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+.contact .contact-form-container .php-email-form button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+    transparent,
+    color-mix(in srgb, #ffffff, transparent 70%),
+    transparent);
+  transition: left 0.5s ease;
 }
 
 .contact .contact-form-container .php-email-form button:hover {
-  background-color: color-mix(in srgb, var(--accent-color), #000 15%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px color-mix(in srgb, var(--accent-color), transparent 75%);
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--accent-color), #000 5%) 0%,
+    var(--accent-color) 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 60%);
+}
+
+.contact .contact-form-container .php-email-form button:hover::before {
+  left: 100%;
 }
 
 .contact .contact-form-container .php-email-form .social-links {
@@ -8801,19 +8985,45 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background-color: color-mix(in srgb, var(--background-color), #f5f8fd 20%);
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--background-color), #f8fafc 15%) 0%,
+    color-mix(in srgb, var(--background-color), #ffffff 5%) 100%);
   color: var(--heading-color);
-  font-size: 16px;
-  transition: all 0.3s ease;
+  font-size: 18px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact .contact-form-container .php-email-form .social-links a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+    var(--accent-color) 0%,
+    color-mix(in srgb, var(--accent-color), #ffffff 20%) 100%);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+  z-index: -1;
 }
 
 .contact .contact-form-container .php-email-form .social-links a:hover {
-  background-color: var(--accent-color);
   color: var(--contrast-color);
-  transform: translateY(-3px);
+  transform: translateY(-4px) scale(1.1);
+  border-color: var(--accent-color);
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+.contact .contact-form-container .php-email-form .social-links a:hover::before {
+  transform: scale(1);
 }
 
 @media (max-width: 768px) {

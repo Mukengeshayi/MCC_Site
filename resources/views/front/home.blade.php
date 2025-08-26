@@ -439,7 +439,21 @@
               <h3>Entrer en contact</h3>
               <p>N’hésitez pas à nous écrire pour toute question ou demande d’information. Nous vous répondrons dans les plus brefs délais.</p>
 
+              @if(session('success'))
+                <div class="alert alert-success mb-3">{{ session('success') }}</div>
+              @endif
+              @if ($errors->any())
+                <div class="alert alert-danger mb-3">
+                  <ul class="mb-0">
+                    @foreach ($errors->all() as $error)
+                      <li>{{ $error }}</li>
+                    @endforeach
+                  </ul>
+                </div>
+              @endif
+
               <form action="{{ route('contact.send') }}" method="POST" class="php-email-form">
+                @csrf
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Entrer votre nom" required="">
@@ -460,9 +474,9 @@
                 </div>
 
                 <div class="my-3">
-                  <div class="loading">Loading</div>
+                  <div class="loading">Envoi en cours…</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="sent-message">Votre message a été envoyé. Merci !</div>
                 </div>
 
                 <div class="form-submit">
