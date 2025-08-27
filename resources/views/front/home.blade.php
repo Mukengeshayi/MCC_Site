@@ -17,8 +17,8 @@
                 <h1 class="text-white pb-4" data-aos="fade-up" data-aos-delay="200">Former aujourd'hui les leaders de demain</h1>
                 <p data-aos="fade-up" data-aos-delay="300">Un enseignement de qualité, des activités enrichissantes et des infrastructures modernes pour un avenir meilleur.</p>
                 <div class="cta-buttons" data-aos="fade-up" data-aos-delay="400">
-                  <a href="#" class="btn-primary btn-blue">Voir nos cycles</a>
-                  <a href="#" class="btn-secondary btn-yellow">Visiter l'ecole </a>
+                  <a href="#" class="btn-primary btn-blue">Découvrir l’école</a>
+                  <a href="#" class="btn-secondary btn-yellow">Voir nos cycles </a>
                 </div>
               </div>
             </div>
@@ -35,7 +35,7 @@
               <h3>Crèche & Maternelle <small class="d-block">(dès 9 mois)</small></h3>
               <p>Éveil et développement des tout-petits dans un environnement sécurisé et stimulant pour leur épanouissement.</p>
               <a href="{{route('education-levels.preschool')}}" class="card-link">
-                <span>En savoir plus</span>
+                <span>Détail du programme</span>
                 <i class="bi bi-arrow-right"></i>
               </a>
             </div>
@@ -48,7 +48,7 @@
               <h3>École Primaire</h3>
               <p>Acquisition des fondamentaux avec un encadrement bienveillant et personnalisé pour chaque élève.</p>
               <a href="{{route('education-levels.primary')}}" class="card-link">
-                <span>En savoir plus</span>
+                <span>Détail du programme</span>
                 <i class="bi bi-arrow-right"></i>
               </a>
             </div>
@@ -61,7 +61,7 @@
                 <h3>Secondaire <small class="d-block">(7ème EB - 8ème CTEB)</small></h3>
                 <p>Programme complet préparant aux humanités avec développement des compétences clés et orientation.</p>
                 <a href="{{route('education-levels.high-school')}}" class="card-link">
-                  <span>En savoir plus</span>
+                  <span>Détail du programme</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
@@ -74,7 +74,7 @@
               <h3>Humanités</h3>
               <p>Orientation Sciences, Littéraire, Commerciale ou Informatique avec accompagnement expert et suivi personnalisé.</p>
               <a href="{{route('education-levels.high-school')}}" class="card-link">
-                <span>En savoir plus</span>
+                <span>Détail du programme</span>
                 <i class="bi bi-arrow-right"></i>
               </a>
             </div>
@@ -86,8 +86,8 @@
           <div class="row align-items-center">
             <div class="col-md-2">
               <div class="event-date">
-                <span class="month">SEPT</span>
-                <span class="day">2</span>
+                <span class="month">EN</span>
+                <span class="day">COURS</span>
               </div>
             </div>
             <div class="col-md-8">
@@ -101,6 +101,16 @@
         </div>
       </div>
     </section>
+
+    <section>
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Qui sommes-nous ?</h2>
+            <p>Une école dynamique où les élèves s'épanouissent à travers diverses activités éducatives et culturelles.</p>
+        </div><!-- End Section Title -->
+
+
+    </section>
+
 
     <section id="students-life-block" class="students-life-block section">
     <!-- Section Title -->
