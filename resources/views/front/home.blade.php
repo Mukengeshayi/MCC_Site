@@ -33,8 +33,11 @@
                 <i class="bi bi-emoji-heart-eyes-fill"></i>
               </div>
               <h3>Crèche & Maternelle <small class="d-block">(dès 9 mois)</small></h3>
-              <p>Éveil et développement des tout-petits dans un environnement sécurisé.</p>
-              <a href="{{route('education-levels.preschool')}}" class="card-link">En savoir plus →</a>
+              <p>Éveil et développement des tout-petits dans un environnement sécurisé et stimulant pour leur épanouissement.</p>
+              <a href="{{route('education-levels.preschool')}}" class="card-link">
+                <span>En savoir plus</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
             </div>
           </div>
           <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
@@ -43,8 +46,11 @@
                 <i class="bi bi-pencil-fill"></i>
               </div>
               <h3>École Primaire</h3>
-              <p>Acquisition des fondamentaux avec un encadrement bienveillant et personnalisé.</p>
-              <a href="{{route('education-levels.primary')}}" class="card-link">En savoir plus →</a>
+              <p>Acquisition des fondamentaux avec un encadrement bienveillant et personnalisé pour chaque élève.</p>
+              <a href="{{route('education-levels.primary')}}" class="card-link">
+                <span>En savoir plus</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
             </div>
           </div>
           <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
@@ -53,8 +59,11 @@
                 <i class="bi bi-journal-bookmark-fill"></i>
                 </div>
                 <h3>Secondaire <small class="d-block">(7ème EB - 8ème CTEB)</small></h3>
-                <p>Programme complet préparant aux humanités avec développement des compétences clés</p>
-                <a href="{{route('education-levels.high-school')}}" class="card-link">En savoir plus →</a>
+                <p>Programme complet préparant aux humanités avec développement des compétences clés et orientation.</p>
+                <a href="{{route('education-levels.high-school')}}" class="card-link">
+                  <span>En savoir plus</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
             </div>
           </div>
           <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
@@ -63,8 +72,11 @@
                 <i class="bi bi-mortarboard-fill"></i>
               </div>
               <h3>Humanités</h3>
-              <p>Orientation Sciences, Littéraire, Commerciale ou Informatique avec accompagnement expert.</p>
-              <a href="{{route('education-levels.high-school')}}" class="card-link">En savoir plus →</a>
+              <p>Orientation Sciences, Littéraire, Commerciale ou Informatique avec accompagnement expert et suivi personnalisé.</p>
+              <a href="{{route('education-levels.high-school')}}" class="card-link">
+                <span>En savoir plus</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>

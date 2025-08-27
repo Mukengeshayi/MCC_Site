@@ -1004,52 +1004,231 @@ section,
 }
 
 .hero .highlights-container {
-  margin-top: -60px;
-  position: relative;
-  z-index: 10;
+    margin-top: -80px;
+    position: relative;
+    z-index: 10;
+    padding: 0 15px;
+}
+.hero .highlights-container .row {
+    margin: 0 -10px;
+  }
+
+  .hero .highlights-container .col-md-3 {
+    padding: 0 10px;
+    margin-bottom: 20px;
 }
 
 .hero .highlights-container .highlight-item {
-  background-color: var(--surface-color);
-  border-radius: 8px;
-  padding: 30px 25px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 20px;
+  padding: 35px 25px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   height: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
 }
+.hero .highlights-container .highlight-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color), #e5454f, var(--accent-color));
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+  }
 
 .hero .highlights-container .highlight-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  /* transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); */
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
 }
 
 .hero .highlights-container .highlight-item .icon {
-  font-size: 2.5rem;
-  height: 70px;
-  width: 70px;
-  line-height: 70px;
-  border-radius: 50%;
-  margin: 0 auto 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent-color);
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+    font-size: 2.8rem;
+    height: 85px;
+    width: 85px;
+    line-height: 85px;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--accent-color) 0%, #ff6b35 100%);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+    transition: all 0.4s ease;
+    position: relative;
+
 }
+.hero .highlights-container .highlight-item .icon::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(135deg, var(--accent-color), #ff6b35);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .hero .highlights-container .highlight-item:hover .icon {
+    transform: rotateY(180deg) scale(1.1);
+    box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
+  }
+
+  .hero .highlights-container .highlight-item:hover .icon::before {
+    opacity: 1;
+  }
 
 .hero .highlights-container .highlight-item h3 {
-  font-size: 1.25rem;
-  margin-bottom: 15px;
-  font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+    font-weight: 700;
+    color: var(--heading-color);
+    line-height: 1.3;
+    transition: color 0.3s ease;
+}
+.hero .highlights-container .highlight-item h3 small {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+.hero .highlights-container .highlight-item:hover h3 {
+    color: var(--accent-color);
 }
 
 .hero .highlights-container .highlight-item p {
-  font-size: 0.95rem;
-  margin-bottom: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+  line-height: 1.6;
+  transition: color 0.3s ease;
 }
 
+.hero .highlights-container .highlight-item:hover p {
+  color: var(--default-color);
+}
+.hero .highlights-container .highlight-item .card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 12px 24px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 107, 53, 0.05));
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.hero .highlights-container .highlight-item .card-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .hero .highlights-container .highlight-item .card-link:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--accent-color), #ff6b35);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+  }
+
+  .hero .highlights-container .highlight-item .card-link:hover::before {
+    left: 100%;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .hero .highlights-container .highlight-item:nth-child(1) .icon {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  }
+
+  .hero .highlights-container .highlight-item:nth-child(2) .icon {
+    background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+  }
+
+  .hero .highlights-container .highlight-item:nth-child(3) .icon {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .hero .highlights-container .highlight-item:nth-child(4) .icon {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  }
+
+  /* Animation de pulsation pour les icônes */
+  .hero .highlights-container .highlight-item .icon {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+    }
+    50% {
+      box-shadow: 0 8px 35px rgba(255, 107, 53, 0.5);
+    }
+  }
+
+  /* Effet de particules flottantes */
+  .hero .highlights-container .highlight-item::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 6px;
+    height: 6px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float 3s ease-in-out infinite;
+  }
+  .hero .highlights-container .highlight-item:nth-child(2)::after {
+    animation-delay: 0.5s;
+  }
+
+  .hero .highlights-container .highlight-item:nth-child(3)::after {
+    animation-delay: 1s;
+  }
+
+  .hero .highlights-container .highlight-item:nth-child(4)::after {
+    animation-delay: 1.5s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translateY(-10px);
+      opacity: 0.6;
+    }
+  }
 .hero .event-banner {
   background-color: color-mix(in srgb, var(--heading-color), transparent 90%);
   padding: 25px 0;
@@ -1121,46 +1300,6 @@ section,
     max-width: 100px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .hero .event-ticker {
   background-color: var(--accent-color);
@@ -8213,6 +8352,8 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+  padding: 60px 0;
+  background-color: var(--surface-color);
 }
 
 
