@@ -186,7 +186,7 @@
         <div class="row align-items-center gy-4">
         <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
             <div class="students-life-img position-relative">
-            <img src="{{asset('assets/img/student-line.jpg')}}" class="img-fluid rounded-4 shadow-sm" alt="Vie scolaire MCC">
+            <img src="{{asset('assets/img/student.png')}}" class="img-fluid rounded-4 shadow-sm" alt="Vie scolaire MCC">
             <div class="img-overlay">
                 <h3>Découvrez la vie dynamique de nos élèves</h3>
                 <a href="{{ route('students-life') }}" class="explore-btn"> En savoir plus <i class="bi bi-arrow-right"></i></a>
