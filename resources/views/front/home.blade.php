@@ -102,14 +102,76 @@
       </div>
     </section>
 
-    <section>
-        <div class="container section-title" data-aos="fade-up">
-            <h2>Qui sommes-nous ?</h2>
-            <p>Une école dynamique où les élèves s'épanouissent à travers diverses activités éducatives et culturelles.</p>
-        </div><!-- End Section Title -->
+    <section id="about" class="about section">
 
+      <div class="container">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-6">
+            <div class="content">
+              <h3>Formons l'Excellence, Cultivons la Sagesse</h3>
+              <p>Messiah Christian College, situé à Kinshasa en RDC, s'engage à promouvoir l'avenir des enfants à travers une éducation de qualité et des valeurs chrétiennes.</p>
+
+              <!-- Valeurs -->
+              <div class="values-section mb-3">
+                <div class="values-grid">
+                  <div class="value-item">
+                    <div class="value-icon">
+                      <i class="bi bi-lightbulb-fill text-primary"></i>
+                    </div>
+                    <div class="value-content">
+                      <h5>Potentiel</h5>
+                    </div>
+                  </div>
+                  <div class="value-item">
+                    <div class="value-icon">
+                      <i class="bi bi-book-fill text-success"></i>
+                    </div>
+                    <div class="value-content">
+                      <h5>Sagesse</h5>
+                    </div>
+                  </div>
+                  <div class="value-item">
+                    <div class="value-icon">
+                      <i class="bi bi-trophy-fill text-warning"></i>
+                    </div>
+                    <div class="value-content">
+                      <h5>Excellence</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Brève Histoire -->
+              <div class="history-brief mb-3">
+                <p><i class="bi bi-clock-history text-info me-2"></i>L'établissement a vu le jour le 11 septembre 2017, grâce à l'initiative du couple apostolique Jean Baptiste Sumbela et la prophétesse Lyly Hulda Sumbela, qui a reconnu le besoin crucial d'une éducation accessible et de qualité dans la région.</p>
+              </div>
+
+              <a href="about.html" class="btn-learn-more">
+                Découvrir Notre Histoire
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="image-wrapper">
+              <img src="{{asset('assets/img/st.png')}}" alt="Campus Overview" class="img-fluid">
+              <div class="experience-badge">
+                <div class="years">7+</div>
+                <div class="text">Années d'Excellence</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
 
     </section>
+
+
 
 
     <section id="students-life-block" class="students-life-block section">
