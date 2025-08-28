@@ -108,7 +108,7 @@
 
         <div class="row gy-5">
 
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
             <div class="content">
               <h3>Formons l'Excellence, Cultivons la Sagesse</h3>
               <p>Messiah Christian College, situé à Kinshasa en RDC, s'engage à promouvoir l'avenir des enfants à travers une éducation de qualité et des valeurs chrétiennes.</p>
@@ -148,16 +148,16 @@
                 <p><i class="bi bi-clock-history text-info me-2"></i>L'établissement a vu le jour le 11 septembre 2017, grâce à l'initiative du couple apostolique Jean Baptiste Sumbela et la prophétesse Lyly Hulda Sumbela, qui a reconnu le besoin crucial d'une éducation accessible et de qualité dans la région.</p>
               </div>
 
-              <a href="about.html" class="btn-learn-more">
+              <a href="{{ route('about') }}" class="btn-learn-more">
                 Découvrir Notre Histoire
                 <i class="bi bi-arrow-right"></i>
               </a>
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
             <div class="image-wrapper">
-              <img src="{{asset('assets/img/st.png')}}" alt="Campus Overview" class="img-fluid">
+              <img src="{{asset('assets/img/st.png')}}" alt="Batiment mcc" class="img-fluid">
               <div class="experience-badge">
                 <div class="years">7+</div>
                 <div class="text">Années d'Excellence</div>
