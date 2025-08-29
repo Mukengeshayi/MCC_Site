@@ -306,152 +306,223 @@
         </div>
     </div>
    </section>
-{{--
-    <section class="campus-gallery py-5">
+
+    <!-- Campus Gallery Section -->
+    <section class="campus-gallery-section section">
         <div class="container">
             <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Notre Ecole en Images</h2>
-                <p>Découvrez les espaces d'apprentissage et les installations du Messiah Christian College</p>
-            </div><!-- End Section Title -->
+            <div class="section-title text-center" data-aos="fade-up">
+                <h2>Notre École en Images</h2>
+                <p>Découvrez les espaces d'apprentissage et les installations modernes du Messiah Christian College</p>
+            </div>
 
-            <div class="gallery-grid" id="campus-gallery">
-                <!-- Salle de classe -->
-                <div class="gallery-item aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
+            <!-- Gallery Filter Tabs -->
+            <div class="gallery-filter-wrapper" data-aos="fade-up" data-aos-delay="100">
+                <div class="gallery-filter-tabs">
+                    <button class="filter-tab active" data-filter="all">
+                        <i class="bi bi-grid-3x3-gap"></i>
+                        <span>Toutes</span>
+                    </button>
+                    <button class="filter-tab" data-filter="classrooms">
+                        <i class="bi bi-book"></i>
+                        <span>Salles de Classe</span>
+                    </button>
+                    <button class="filter-tab" data-filter="labs">
+                        <i class="bi bi-cpu"></i>
+                        <span>Laboratoires</span>
+                    </button>
+                    <button class="filter-tab" data-filter="sports">
+                        <i class="bi bi-trophy"></i>
+                        <span>Sports</span>
+                    </button>
+                    <button class="filter-tab" data-filter="facilities">
+                        <i class="bi bi-building"></i>
+                        <span>Installations</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="campus-gallery" data-aos="fade-up" data-aos-delay="200">
+                <!-- Salle de classe moderne -->
+                <div class="gallery-item" data-category="classrooms" data-aos="zoom-in" data-aos-delay="100">
                     <a href="{{asset('assets/img/st.png')}}"
-                    class="glightbox"
-                    data-gallery="campus-gallery"
-                    data-title="Salle de classe moderne"
-                    data-description="Espace d'apprentissage équipé avec les dernières technologies éducatives"
-                    data-type="image">
-                        <img src="{{asset('assets/img/st.png')}}"
-                            alt="Salle de classe moderne"
-                            class="gallery-image"
-                            loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <i class="bi bi-zoom-in"></i>
-                                <span class="overlay-text">Agrandir</span>
+                       class="glightbox"
+                       data-gallery="campus-gallery"
+                       data-title="Salle de Classe Moderne"
+                       data-description="Espace d'apprentissage équipé avec les dernières technologies éducatives et un design ergonomique pour optimiser l'expérience d'apprentissage des élèves."
+                       data-type="image">
+                        <div class="gallery-image-wrapper">
+                            <img src="{{asset('assets/img/st.png')}}"
+                                 alt="Salle de classe moderne"
+                                 class="gallery-image"
+                                 loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <div class="overlay-icon">
+                                        <i class="bi bi-zoom-in"></i>
+                                    </div>
+                                    <div class="overlay-text">
+                                        <h4>Salle de Classe</h4>
+                                        <p>Technologies modernes</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Bibliothèque -->
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                <div class="gallery-item" data-category="facilities" data-aos="zoom-in" data-aos-delay="150">
                     <a href="{{asset('assets/img/st.png')}}"
-                    class="glightbox"
-                    data-gallery="campus-gallery"
-                    data-title="Bibliothèque centrale"
-                    data-description="Espace de recherche et d'étude avec plus de 15,000 ouvrages"
-                    data-type="image">
-                        <img src="{{asset('assets/img/st.png')}}"
-                            alt="Bibliothèque centrale"
-                            class="gallery-image"
-                            loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <i class="bi bi-zoom-in"></i>
-                                <span class="overlay-text">Agrandir</span>
+                       class="glightbox"
+                       data-gallery="campus-gallery"
+                       data-title="Bibliothèque Centrale"
+                       data-description="Espace de recherche et d'étude avec plus de 15,000 ouvrages, zones de travail collaboratif et ressources numériques pour enrichir l'apprentissage."
+                       data-type="image">
+                        <div class="gallery-image-wrapper">
+                            <img src="{{asset('assets/img/st.png')}}"
+                                 alt="Bibliothèque centrale"
+                                 class="gallery-image"
+                                 loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <div class="overlay-icon">
+                                        <i class="bi bi-zoom-in"></i>
+                                    </div>
+                                    <div class="overlay-text">
+                                        <h4>Bibliothèque</h4>
+                                        <p>15,000+ ouvrages</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Laboratoire informatique -->
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                <div class="gallery-item" data-category="labs" data-aos="zoom-in" data-aos-delay="200">
                     <a href="{{asset('assets/img/st.png')}}"
-                    class="glightbox"
-                    data-gallery="campus-gallery"
-                    data-title="Laboratoire informatique"
-                    data-description="Équipements de pointe pour l'apprentissage des technologies"
-                    data-type="image">
-                        <img src="{{asset('assets/img/st.png')}}"
-                            alt="Laboratoire informatique"
-                            class="gallery-image"
-                            loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <i class="bi bi-zoom-in"></i>
-                                <span class="overlay-text">Agrandir</span>
+                       class="glightbox"
+                       data-gallery="campus-gallery"
+                       data-title="Laboratoire Informatique"
+                       data-description="Équipements de pointe pour l'apprentissage des technologies, programmation et développement des compétences numériques essentielles."
+                       data-type="image">
+                        <div class="gallery-image-wrapper">
+                            <img src="{{asset('assets/img/st.png')}}"
+                                 alt="Laboratoire informatique"
+                                 class="gallery-image"
+                                 loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <div class="overlay-icon">
+                                        <i class="bi bi-zoom-in"></i>
+                                    </div>
+                                    <div class="overlay-text">
+                                        <h4>Lab Informatique</h4>
+                                        <p>Technologies avancées</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Terrain de sport -->
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                <div class="gallery-item" data-category="sports" data-aos="zoom-in" data-aos-delay="250">
                     <a href="{{asset('assets/img/st.png')}}"
-                    class="glightbox"
-                    data-gallery="campus-gallery"
-                    data-title="Installations sportives"
-                    data-description="Terrain multifonctionnel pour tous les sports"
-                    data-type="image">
-                        <img src="{{asset('assets/img/st.png')}}"
-                            alt="Installations sportives"
-                            class="gallery-image"
-                            loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <i class="zoom-icon">🔍</i>
-                                <span class="overlay-text">Agrandir</span>
+                       class="glightbox"
+                       data-gallery="campus-gallery"
+                       data-title="Installations Sportives"
+                       data-description="Terrain multifonctionnel pour tous les sports, favorisant le développement physique et l'esprit d'équipe des élèves."
+                       data-type="image">
+                        <div class="gallery-image-wrapper">
+                            <img src="{{asset('assets/img/st.png')}}"
+                                 alt="Installations sportives"
+                                 class="gallery-image"
+                                 loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <div class="overlay-icon">
+                                        <i class="bi bi-zoom-in"></i>
+                                    </div>
+                                    <div class="overlay-text">
+                                        <h4>Terrain Sport</h4>
+                                        <p>Multifonctionnel</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Cafétéria -->
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+                <div class="gallery-item" data-category="facilities" data-aos="zoom-in" data-aos-delay="300">
                     <a href="{{asset('assets/img/st.png')}}"
-                    class="glightbox"
-                    data-gallery="campus-gallery"
-                    data-title="Espace de restauration"
-                    data-description="Cafétéria moderne avec vue sur le campus"
-                    data-type="image">
-                        <img src="{{asset('assets/img/st.png')}}"
-                            alt="Espace de restauration"
-                            class="gallery-image"
-                            loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <i class="bi bi-zoom-in"></i>
-                                <span class="overlay-text">Agrandir</span>
+                       class="glightbox"
+                       data-gallery="campus-gallery"
+                       data-title="Espace de Restauration"
+                       data-description="Cafétéria moderne avec vue sur le campus, proposant des repas équilibrés et un espace convivial pour les élèves."
+                       data-type="image">
+                        <div class="gallery-image-wrapper">
+                            <img src="{{asset('assets/img/st.png')}}"
+                                 alt="Espace de restauration"
+                                 class="gallery-image"
+                                 loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <div class="overlay-icon">
+                                        <i class="bi bi-zoom-in"></i>
+                                    </div>
+                                    <div class="overlay-text">
+                                        <h4>Cafétéria</h4>
+                                        <p>Vue sur campus</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </a>
                 </div>
 
                 <!-- Auditorium -->
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
+                <div class="gallery-item" data-category="facilities" data-aos="zoom-in" data-aos-delay="350">
                     <a href="{{asset('assets/img/st.png')}}"
-                    class="glightbox"
-                    data-gallery="campus-gallery"
-                    data-title="Auditorium principal"
-                    data-description="Salle de spectacle et de conférences de 300 places"
-                    data-type="image">
-                        <img src="{{asset('assets/img/st.png')}}"
-                            alt="Auditorium principal"
-                            class="gallery-image"
-                            loading="lazy">
-                        <div class="gallery-overlay">
-                            <div class="overlay-content">
-                                <i class="bi bi-zoom-in"></i>
-                                <span class="overlay-text">Agrandir</span>
+                       class="glightbox"
+                       data-gallery="campus-gallery"
+                       data-title="Auditorium Principal"
+                       data-description="Salle de spectacle et de conférences de 300 places, équipée des dernières technologies audiovisuelles pour les événements scolaires."
+                       data-type="image">
+                        <div class="gallery-image-wrapper">
+                            <img src="{{asset('assets/img/st.png')}}"
+                                 alt="Auditorium principal"
+                                 class="gallery-image"
+                                 loading="lazy">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <div class="overlay-icon">
+                                        <i class="bi bi-zoom-in"></i>
+                                    </div>
+                                    <div class="overlay-text">
+                                        <h4>Auditorium</h4>
+                                        <p>300 places</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </a>
                 </div>
             </div>
 
-            <!-- Bouton pour voir plus -->
-            <div class="text-center mt-2 " data-aos="fade-up" data-aos-delay="500">
-                <a href="#" class="btn btn-outline-primary btn-lg">
+            <!-- Gallery CTA -->
+            <div class="gallery-cta text-center" data-aos="fade-up" data-aos-delay="500">
+                <a href="#" class="btn btn-primary btn-lg">
                     <i class="bi bi-images me-2"></i>
                     Voir toutes nos installations
                 </a>
+                <p class="gallery-subtitle">Découvrez l'excellence de nos infrastructures éducatives</p>
             </div>
         </div>
-    </section> --}}
+    </section>
 
 
     <section id="events" class="events section">
