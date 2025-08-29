@@ -197,43 +197,103 @@
             <div class="students-life-content">
 
             <div class="row g-4 mb-4">
-                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                <div class="student-activity-item">
-                    <div class="icon-box">
-                    <i class="bi bi-lightbulb"></i>
+                <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                <div class="modern-activity-card">
+                    <div class="card-header">
+                        <div class="activity-icon">
+                            <i class="bi bi-music-note-beamed"></i>
+                        </div>
+                        <div class="activity-badge">Musique</div>
                     </div>
-                    <h4>Clubs scientifiques</h4>
-                    <p>Encourager la curiosité et l'innovation grâce à des projets et expériences pratiques.</p>
+                    <div class="card-body">
+                        <h4>Clubs de Musique</h4>
+                        <p>Développer le talent musical et l'expression artistique des élèves.</p>
+                        <div class="activity-features">
+                            <span class="feature-tag">Chorale</span>
+                            <span class="feature-tag">Instruments</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{ route('students-life') }}" class="activity-link">
+                            <span>Découvrir</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
                 </div>
 
-                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                <div class="student-activity-item">
-                    <div class="icon-box">
-                    <i class="bi bi-music-note-beamed"></i>
+                <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                <div class="modern-activity-card">
+                    <div class="card-header">
+                        <div class="activity-icon">
+                            <i class="bi bi-water"></i>
+                        </div>
+                        <div class="activity-badge">Sport</div>
                     </div>
-                    <h4>Théâtre, musique & chorale</h4>
-                    <p>Développer le talent artistique et l'expression créative des élèves.</p>
+                    <div class="card-body">
+                        <h4>Natation</h4>
+                        <p>Apprentissage de la natation et compétitions aquatiques.</p>
+                        <div class="activity-features">
+                            <span class="feature-tag">Technique</span>
+                            <span class="feature-tag">Compétition</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{ route('students-life') }}" class="activity-link">
+                            <span>Découvrir</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
                 </div>
 
-                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                <div class="student-activity-item">
-                    <div class="icon-box">
-                    <i class="bi bi-trophy"></i>
+                <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                <div class="modern-activity-card">
+                    <div class="card-header">
+                        <div class="activity-icon">
+                            <i class="bi bi-palette"></i>
+                        </div>
+                        <div class="activity-badge">Arts</div>
                     </div>
-                    <h4>Activités sportives</h4>
-                    <p>Compétitions et tournois pour promouvoir la santé et l'esprit d'équipe.</p>
+                    <div class="card-body">
+                        <h4>Théâtre & Art</h4>
+                        <p>Expression créative à travers le théâtre et les arts plastiques.</p>
+                        <div class="activity-features">
+                            <span class="feature-tag">Créativité</span>
+                            <span class="feature-tag">Expression</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{ route('students-life') }}" class="activity-link">
+                            <span>Découvrir</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
                 </div>
 
-                <div class="col-md-6" data-aos="zoom-in" data-aos-delay="500">
-                <div class="student-activity-item">
-                    <div class="icon-box">
-                    <i class="bi bi-people"></i>
+                <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="500">
+                <div class="modern-activity-card">
+                    <div class="card-header">
+                        <div class="activity-icon">
+                            <i class="bi bi-trophy"></i>
+                        </div>
+                        <div class="activity-badge">Sports</div>
                     </div>
-                    <h4>Sorties & journées culturelles</h4>
-                    <p>Excursions, visites et portes ouvertes pour enrichir la formation des élèves.</p>
+                    <div class="card-body">
+                        <h4>Activités Sportives</h4>
+                        <p>Compétitions et tournois pour promouvoir la santé et l'esprit d'équipe.</p>
+                        <div class="activity-features">
+                            <span class="feature-tag">Compétition</span>
+                            <span class="feature-tag">Équipe</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{ route('students-life') }}" class="activity-link">
+                            <span>Découvrir</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
                 </div>
             </div>

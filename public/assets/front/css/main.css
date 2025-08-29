@@ -3187,10 +3187,6 @@ section,
   opacity: 0.15;
 }
 
-.academics .intro-wrapper .intro-content {
-  padding-left: 20px;
-}
-
 .academics .intro-wrapper .intro-content .subtitle {
   display: inline-block;
   background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
@@ -6381,11 +6377,6 @@ section,
   font-size: 0.95rem;
 }
 
-.events-2 .sidebar .sidebar-item.featured-event .featured-event-content p i {
-  color: var(--accent-color);
-  margin-right: 0.25rem;
-}
-
 .events-2 .sidebar .sidebar-item.featured-event .featured-event-content .btn-register {
   display: inline-block;
   background: var(--accent-color);
@@ -7981,11 +7972,6 @@ section,
   background-color: var(--surface-color);
   border-radius: 30px;
   padding: 40px;
-}
-
-.terms-of-service .terms-notices .notice-items {
-  display: grid;
-  gap: 25px;
 }
 
 .terms-of-service .terms-notices .notice-items .notice-item {
@@ -9742,4 +9728,223 @@ section,
     width: 100%;
     justify-content: center;
   }
+}
+
+/*--------------------------------------------------------------
+# Modern Activity Cards for Students Life Section
+--------------------------------------------------------------*/
+.students-life-block .students-life-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.students-life-block .modern-activity-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.students-life-block .modern-activity-card .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.students-life-block .modern-activity-card .card-body p {
+    flex: 1;
+}
+.modern-activity-card {
+    background: var(--surface-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    position: relative;
+    overflow: hidden;
+}
+
+.modern-activity-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, var(--accent-color) 0%, #ff6b35 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.modern-activity-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    border-color: var(--accent-color);
+}
+
+.modern-activity-card:hover::before {
+    transform: scaleX(1);
+}
+
+.modern-activity-card .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.modern-activity-card .activity-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--accent-color) 0%, #ff6b35 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 4px 16px rgba(18, 112, 182, 0.3);
+    transition: all 0.3s ease;
+}
+
+.modern-activity-card:hover .activity-icon {
+    transform: scale(1.05) rotate(3deg);
+    box-shadow: 0 8px 24px rgba(18, 112, 182, 0.4);
+}
+
+.modern-activity-card .activity-badge {
+    background: rgba(18, 112, 182, 0.1);
+    color: var(--accent-color);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(18, 112, 182, 0.2);
+}
+
+.modern-activity-card .card-body {
+    margin-bottom: 8px;
+}
+
+.modern-activity-card .card-body h4 {
+    color: var(--heading-color);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.modern-activity-card .card-body p {
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+.modern-activity-card .activity-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.modern-activity-card .feature-tag {
+    background: rgba(18, 112, 182, 0.08);
+    color: var(--accent-color);
+    padding: 0.3rem 0.7rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(18, 112, 182, 0.15);
+    transition: all 0.2s ease;
+}
+
+.modern-activity-card:hover .feature-tag {
+    background: rgba(18, 112, 182, 0.15);
+    color: var(--accent-color);
+    border-color: rgba(18, 112, 182, 0.3);
+}
+
+.modern-activity-card .card-footer {
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    padding-top: 8px;
+}
+
+.modern-activity-card .activity-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    padding: 0.6rem 0;
+}
+
+.modern-activity-card .activity-link:hover {
+    color: #ff6b35;
+    transform: translateX(3px);
+}
+
+.modern-activity-card .activity-link i {
+    transition: transform 0.3s ease;
+}
+
+.modern-activity-card .activity-link:hover i {
+    transform: translateX(4px);
+}
+
+
+
+/* Responsive Design for Modern Cards - Keep Original Layout */
+@media (max-width: 768px) {
+    .modern-activity-card {
+        padding: 20px;
+    }
+
+    .modern-activity-card .card-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+
+    .modern-activity-card .activity-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 24px;
+    }
+
+    .modern-activity-card .card-body h4 {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    .modern-activity-card .card-body p {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .modern-activity-card .activity-features {
+        gap: 4px;
+    }
+
+    .modern-activity-card .feature-tag {
+        padding: 2px 6px;
+        font-size: 10px;
+    }
+
+    .modern-activity-card .card-footer {
+        padding-top: 8px;
+    }
+
+    .modern-activity-card .activity-link {
+        font-size: 13px;
+        padding: 4px 0;
+    }
 }
