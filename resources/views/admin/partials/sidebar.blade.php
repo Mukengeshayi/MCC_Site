@@ -63,6 +63,14 @@
                     </ul>
                 </li>
 
+                <!-- School Information -->
+                <li class="nav-item">
+                    <a href="{{ route('admin.schools.index') }}" class="nav-link {{ request()->is('admin/schools*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-school"></i>
+                        <p>Informations de l'École</p>
+                    </a>
+                </li>
+
                 <!-- System Section -->
                 <li class="nav-header">SYSTÈME</li>
                 <li class="nav-item">
