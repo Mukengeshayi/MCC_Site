@@ -179,6 +179,16 @@ h6 {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
+.scrolled .header .mobile-nav-toggle {
+  color: #1270b6;
+  background: rgba(18, 112, 182, 0.1);
+}
+
+.scrolled .header .mobile-nav-toggle:hover {
+  color: #1270b6;
+  background: rgba(18, 112, 182, 0.15);
+}
+
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
@@ -5585,11 +5595,6 @@ section,
   margin-right: 5px;
 }
 
-.campus-facilities .facilities-tabs .tab-content .facility-cards .facility-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
 .campus-facilities .facilities-tabs .tab-content .facility-cards .facility-card:hover .icon-container {
   background: var(--accent-color);
 }
@@ -7179,7 +7184,17 @@ h6 {
   --heading-color: #1270b6;
   --nav-color: #1270b6;
   --nav-hover-color: #f2b833;
-  /* --background-color: rgba(0, 0, 0, 0.7); */
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+}
+
+.scrolled .header .mobile-nav-toggle {
+  color: #1270b6;
+  background: rgba(18, 112, 182, 0.1);
+}
+
+.scrolled .header .mobile-nav-toggle:hover {
+  color: #1270b6;
+  background: rgba(18, 112, 182, 0.15);
 }
 
 /*--------------------------------------------------------------
@@ -11159,11 +11174,6 @@ section,
   color: var(--heading-color);
   margin-right: 15px;
   transition: color 0.3s ease;
-}
-
-.students-life .students-life-tabs .tab-content .facilities-list .facility-item h5 {
-  margin-bottom: 5px;
-  font-size: 1rem;
 }
 
 .students-life .students-life-tabs .tab-content .facilities-list .facility-item p {
