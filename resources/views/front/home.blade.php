@@ -323,38 +323,34 @@
                         <i class="bi bi-grid-3x3-gap"></i>
                         <span>Toutes</span>
                     </button>
-                    <button class="filter-tab" data-filter="classrooms">
-                        <i class="bi bi-book"></i>
-                        <span>Salles de Classe</span>
+                    <button class="filter-tab" data-filter="activities">
+                        <i class="bi bi-people-fill"></i>
+                        <span>Vie Scolaires</span>
                     </button>
-                    <button class="filter-tab" data-filter="labs">
-                        <i class="bi bi-cpu"></i>
-                        <span>Laboratoires</span>
+                    <button class="filter-tab" data-filter="events">
+                        <i class="bi bi-calendar-event"></i>
+                        <span>Événements</span>
                     </button>
-                    <button class="filter-tab" data-filter="sports">
-                        <i class="bi bi-trophy"></i>
-                        <span>Sports</span>
-                    </button>
-                    <button class="filter-tab" data-filter="facilities">
+                    <button class="filter-tab" data-filter="infrastructure">
                         <i class="bi bi-building"></i>
-                        <span>Installations</span>
+                        <span>Infrastructures</span>
                     </button>
                 </div>
             </div>
 
             <!-- Gallery Grid -->
             <div class="gallery-grid" id="campus-gallery" data-aos="fade-up" data-aos-delay="200">
-                <!-- Salle de classe moderne -->
-                <div class="gallery-item" data-category="classrooms" data-aos="zoom-in" data-aos-delay="100">
+                <!-- Activités Scolaires - Salle de classe -->
+                <div class="gallery-item" data-category="activities" data-aos="zoom-in" data-aos-delay="100">
                     <a href="{{asset('assets/img/st.png')}}"
                        class="glightbox"
                        data-gallery="campus-gallery"
-                       data-title="Salle de Classe Moderne"
-                       data-description="Espace d'apprentissage équipé avec les dernières technologies éducatives et un design ergonomique pour optimiser l'expérience d'apprentissage des élèves."
+                       data-title="Activités Scolaires - Salle de Classe"
+                       data-description="Découvrez le quotidien des élèves dans nos salles de classe modernes, équipées des dernières technologies éducatives."
                        data-type="image">
                         <div class="gallery-image-wrapper">
                             <img src="{{asset('assets/img/st.png')}}"
-                                 alt="Salle de classe moderne"
+                                 alt="Activités scolaires en classe"
                                  class="gallery-image"
                                  loading="lazy">
                             <div class="gallery-overlay">
@@ -363,8 +359,8 @@
                                         <i class="bi bi-zoom-in"></i>
                                     </div>
                                     <div class="overlay-text">
-                                        <h4>Salle de Classe</h4>
-                                        <p>Technologies modernes</p>
+                                        <h4>Activités Scolaires</h4>
+                                        <p>Apprentissage actif</p>
                                     </div>
                                 </div>
                             </div>
@@ -372,13 +368,13 @@
                     </a>
                 </div>
 
-                <!-- Bibliothèque -->
-                <div class="gallery-item" data-category="facilities" data-aos="zoom-in" data-aos-delay="150">
+                <!-- Infrastructures - Bibliothèque -->
+                <div class="gallery-item" data-category="infrastructure" data-aos="zoom-in" data-aos-delay="150">
                     <a href="{{asset('assets/img/st.png')}}"
                        class="glightbox"
                        data-gallery="campus-gallery"
-                       data-title="Bibliothèque Centrale"
-                       data-description="Espace de recherche et d'étude avec plus de 15,000 ouvrages, zones de travail collaboratif et ressources numériques pour enrichir l'apprentissage."
+                       data-title="Infrastructures - Bibliothèque Centrale"
+                       data-description="Notre bibliothèque moderne avec plus de 15,000 ouvrages, zones de travail collaboratif et ressources numériques."
                        data-type="image">
                         <div class="gallery-image-wrapper">
                             <img src="{{asset('assets/img/st.png')}}"
@@ -391,8 +387,8 @@
                                         <i class="bi bi-zoom-in"></i>
                                     </div>
                                     <div class="overlay-text">
-                                        <h4>Bibliothèque</h4>
-                                        <p>15,000+ ouvrages</p>
+                                        <h4>Infrastructures</h4>
+                                        <p>Bibliothèque moderne</p>
                                     </div>
                                 </div>
                             </div>
@@ -400,13 +396,13 @@
                     </a>
                 </div>
 
-                <!-- Laboratoire informatique -->
-                <div class="gallery-item" data-category="labs" data-aos="zoom-in" data-aos-delay="200">
+                <!-- Infrastructures - Laboratoire -->
+                <div class="gallery-item" data-category="infrastructure" data-aos="zoom-in" data-aos-delay="200">
                     <a href="{{asset('assets/img/st.png')}}"
                        class="glightbox"
                        data-gallery="campus-gallery"
-                       data-title="Laboratoire Informatique"
-                       data-description="Équipements de pointe pour l'apprentissage des technologies, programmation et développement des compétences numériques essentielles."
+                       data-title="Infrastructures - Laboratoire Informatique"
+                       data-description="Notre laboratoire informatique équipé des dernières technologies pour l'apprentissage numérique et la programmation."
                        data-type="image">
                         <div class="gallery-image-wrapper">
                             <img src="{{asset('assets/img/st.png')}}"
@@ -419,8 +415,8 @@
                                         <i class="bi bi-zoom-in"></i>
                                     </div>
                                     <div class="overlay-text">
-                                        <h4>Lab Informatique</h4>
-                                        <p>Technologies avancées</p>
+                                        <h4>Infrastructures</h4>
+                                        <p>Lab informatique</p>
                                     </div>
                                 </div>
                             </div>
@@ -428,17 +424,17 @@
                     </a>
                 </div>
 
-                <!-- Terrain de sport -->
-                <div class="gallery-item" data-category="sports" data-aos="zoom-in" data-aos-delay="250">
+                <!-- Événements - Activités sportives -->
+                <div class="gallery-item" data-category="events" data-aos="zoom-in" data-aos-delay="250">
                     <a href="{{asset('assets/img/st.png')}}"
                        class="glightbox"
                        data-gallery="campus-gallery"
-                       data-title="Installations Sportives"
-                       data-description="Terrain multifonctionnel pour tous les sports, favorisant le développement physique et l'esprit d'équipe des élèves."
+                       data-title="Événements - Activités Sportives"
+                       data-description="Découvrez nos événements sportifs et les activités qui favorisent le développement physique et l'esprit d'équipe."
                        data-type="image">
                         <div class="gallery-image-wrapper">
                             <img src="{{asset('assets/img/st.png')}}"
-                                 alt="Installations sportives"
+                                 alt="Événements sportifs"
                                  class="gallery-image"
                                  loading="lazy">
                             <div class="gallery-overlay">
@@ -447,8 +443,8 @@
                                         <i class="bi bi-zoom-in"></i>
                                     </div>
                                     <div class="overlay-text">
-                                        <h4>Terrain Sport</h4>
-                                        <p>Multifonctionnel</p>
+                                        <h4>Événements</h4>
+                                        <p>Activités sportives</p>
                                     </div>
                                 </div>
                             </div>
@@ -456,17 +452,17 @@
                     </a>
                 </div>
 
-                <!-- Cafétéria -->
-                <div class="gallery-item" data-category="facilities" data-aos="zoom-in" data-aos-delay="300">
+                <!-- Activités Scolaires - Cafétéria -->
+                <div class="gallery-item" data-category="activities" data-aos="zoom-in" data-aos-delay="300">
                     <a href="{{asset('assets/img/st.png')}}"
                        class="glightbox"
                        data-gallery="campus-gallery"
-                       data-title="Espace de Restauration"
-                       data-description="Cafétéria moderne avec vue sur le campus, proposant des repas équilibrés et un espace convivial pour les élèves."
+                       data-title="Activités Scolaires - Espace de Restauration"
+                       data-description="La cafétéria, cœur de la vie quotidienne des élèves, avec vue sur le campus et repas équilibrés."
                        data-type="image">
                         <div class="gallery-image-wrapper">
                             <img src="{{asset('assets/img/st.png')}}"
-                                 alt="Espace de restauration"
+                                 alt="Activités scolaires - cafétéria"
                                  class="gallery-image"
                                  loading="lazy">
                             <div class="gallery-overlay">
@@ -475,8 +471,8 @@
                                         <i class="bi bi-zoom-in"></i>
                                     </div>
                                     <div class="overlay-text">
-                                        <h4>Cafétéria</h4>
-                                        <p>Vue sur campus</p>
+                                        <h4>Activités Scolaires</h4>
+                                        <p>Espace convivial</p>
                                     </div>
                                 </div>
                             </div>
@@ -484,17 +480,17 @@
                     </a>
                 </div>
 
-                <!-- Auditorium -->
-                <div class="gallery-item" data-category="facilities" data-aos="zoom-in" data-aos-delay="350">
+                <!-- Infrastructures - Auditorium -->
+                <div class="gallery-item" data-category="infrastructure" data-aos="zoom-in" data-aos-delay="350">
                     <a href="{{asset('assets/img/st.png')}}"
                        class="glightbox"
                        data-gallery="campus-gallery"
-                       data-title="Auditorium Principal"
-                       data-description="Salle de spectacle et de conférences de 300 places, équipée des dernières technologies audiovisuelles pour les événements scolaires."
+                       data-title="Infrastructures - Auditorium Principal"
+                       data-description="Notre auditorium de 300 places, équipé des dernières technologies audiovisuelles pour les événements scolaires."
                        data-type="image">
                         <div class="gallery-image-wrapper">
                             <img src="{{asset('assets/img/st.png')}}"
-                                 alt="Auditorium principal"
+                                 alt="Infrastructures - auditorium"
                                  class="gallery-image"
                                  loading="lazy">
                             <div class="gallery-overlay">
@@ -503,8 +499,8 @@
                                         <i class="bi bi-zoom-in"></i>
                                     </div>
                                     <div class="overlay-text">
-                                        <h4>Auditorium</h4>
-                                        <p>300 places</p>
+                                        <h4>Infrastructures</h4>
+                                        <p>Auditorium 300 places</p>
                                     </div>
                                 </div>
                             </div>
@@ -517,9 +513,9 @@
             <div class="gallery-cta text-center" data-aos="fade-up" data-aos-delay="500">
                 <a href="#" class="btn btn-primary btn-lg">
                     <i class="bi bi-images me-2"></i>
-                    Voir toutes nos installations
+                    Voir toute la galerie
                 </a>
-                <p class="gallery-subtitle">Découvrez l'excellence de nos infrastructures éducatives</p>
+                <p class="gallery-subtitle">Découvrez l'excellence de nos activités et infrastructures éducatives</p>
             </div>
         </div>
     </section>
