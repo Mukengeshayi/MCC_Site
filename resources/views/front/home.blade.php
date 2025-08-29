@@ -398,8 +398,8 @@
 
       <!-- Section Title -->
       <div class="container section-title aos-init aos-animate" data-aos="fade-up">
-        <h2>Events</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Événements</h2>
+        <p>Découvrez les prochains événements et activités organisés par notre école</p>
       </div><!-- End Section Title -->
 
       <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
@@ -409,33 +409,26 @@
           <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
             <div class="event-item">
               <div class="event-image">
-                <img src="assets/img/education/events-3.webp" alt="Workshop" class="img-fluid">
+                <img src="{{asset('assets/img/activities/theatre-art.jpg')}}" alt="Festival de Théâtre" class="img-fluid">
                 <div class="event-date-overlay">
                   <span class="date">MAR<br>18</span>
                 </div>
               </div>
               <div class="event-details">
                 <div class="event-category">
-                  <span class="badge academic">Academic</span>
-                  <span class="event-time">2:00 PM</span>
+                  <span class="badge arts">Arts & Culture</span>
+                  <span class="event-time">14:00</span>
                 </div>
-                <h3>Advanced Mathematics Workshop</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h3>Festival de Théâtre des Élèves</h3>
+                <p>Venez assister aux représentations théâtrales de nos élèves talentueux. Une journée dédiée à l'art dramatique et à la créativité.</p>
                 <div class="event-info">
                   <div class="info-row">
                     <i class="bi bi-geo-alt"></i>
-                    <span>Room 205, Science Building</span>
+                    <span>Auditorium Principal</span>
                   </div>
                   <div class="info-row">
                     <i class="bi bi-people"></i>
-                    <span>25 Participants</span>
-                  </div>
-                </div>
-                <div class="event-footer">
-                  <a href="#" class="register-btn">Register Now</a>
-                  <div class="event-share">
-                    <i class="bi bi-share"></i>
-                    <i class="bi bi-heart"></i>
+                    <span>Ouvert au public</span>
                   </div>
                 </div>
               </div>
@@ -445,33 +438,26 @@
           <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
             <div class="event-item">
               <div class="event-image">
-                <img src="assets/img/education/events-5.webp" alt="Tournament" class="img-fluid">
+                <img src="{{asset('assets/img/activities/swimming.jpg')}}" alt="Compétition de Natation" class="img-fluid">
                 <div class="event-date-overlay">
-                  <span class="date">APR<br>05</span>
+                  <span class="date">AVR<br>05</span>
                 </div>
               </div>
               <div class="event-details">
                 <div class="event-category">
-                  <span class="badge sports">Sports</span>
-                  <span class="event-time">9:00 AM</span>
+                  <span class="badge sports">Compétition Sportive</span>
+                  <span class="event-time">09:00</span>
                 </div>
-                <h3>Inter-School Basketball Championship</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed eiusmod tempor incididunt ut labore et dolore magna.</p>
+                <h3>Championnat Inter-Classes de Natation</h3>
+                <p>Compétition de natation entre les différentes classes. Démonstrations de techniques et remise de médailles pour les meilleurs nageurs.</p>
                 <div class="event-info">
                   <div class="info-row">
                     <i class="bi bi-geo-alt"></i>
-                    <span>Sports Complex Gym</span>
+                    <span>Piscine de l'École</span>
                   </div>
                   <div class="info-row">
                     <i class="bi bi-people"></i>
-                    <span>8 Teams</span>
-                  </div>
-                </div>
-                <div class="event-footer">
-                  <a href="#" class="register-btn">Register Now</a>
-                  <div class="event-share">
-                    <i class="bi bi-share"></i>
-                    <i class="bi bi-heart"></i>
+                    <span>Classes 5ème à 8ème</span>
                   </div>
                 </div>
               </div>
@@ -481,33 +467,26 @@
           <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="400">
             <div class="event-item">
               <div class="event-image">
-                <img src="assets/img/education/events-7.webp" alt="Art Exhibition" class="img-fluid">
+                <img src="{{asset('assets/img/activities/music-club.jpg')}}" alt="Concert de Musique" class="img-fluid">
                 <div class="event-date-overlay">
-                  <span class="date">APR<br>12</span>
+                  <span class="date">AVR<br>12</span>
                 </div>
               </div>
               <div class="event-details">
                 <div class="event-category">
-                  <span class="badge arts">Arts</span>
-                  <span class="event-time">6:00 PM</span>
+                  <span class="badge arts">Concert Musical</span>
+                  <span class="event-time">18:00</span>
                 </div>
-                <h3>Student Art Exhibition Opening</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                <h3>Concert de Printemps</h3>
+                <p>Spectacle musical présenté par notre club de musique. Orchestre, chorale et solistes vous feront découvrir la richesse de la musique classique et moderne.</p>
                 <div class="event-info">
                   <div class="info-row">
                     <i class="bi bi-geo-alt"></i>
-                    <span>Art Gallery, First Floor</span>
+                    <span>Salle de Concert</span>
                   </div>
                   <div class="info-row">
                     <i class="bi bi-people"></i>
-                    <span>Open to All</span>
-                  </div>
-                </div>
-                <div class="event-footer">
-                  <a href="#" class="register-btn">Register Now</a>
-                  <div class="event-share">
-                    <i class="bi bi-share"></i>
-                    <i class="bi bi-heart"></i>
+                    <span>300 places disponibles</span>
                   </div>
                 </div>
               </div>
@@ -517,33 +496,26 @@
           <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
             <div class="event-item">
               <div class="event-image">
-                <img src="assets/img/education/events-2.webp" alt="Science Fair" class="img-fluid">
+                <img src="{{asset('assets/img/activities/football.jpg')}}" alt="Tournoi de Football" class="img-fluid">
                 <div class="event-date-overlay">
-                  <span class="date">MAY<br>03</span>
+                  <span class="date">MAI<br>03</span>
                 </div>
               </div>
               <div class="event-details">
                 <div class="event-category">
-                  <span class="badge academic">Academic</span>
-                  <span class="event-time">10:00 AM</span>
+                  <span class="badge sports">Tournoi Sportif</span>
+                  <span class="event-time">10:00</span>
                 </div>
-                <h3>Annual Science Fair Competition</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h3>Tournoi de Football Inter-Écoles</h3>
+                <p>Compétition de football opposant notre école aux autres établissements de la région. Esprit sportif et fair-play au programme.</p>
                 <div class="event-info">
                   <div class="info-row">
                     <i class="bi bi-geo-alt"></i>
-                    <span>Main Auditorium Hall</span>
+                    <span>Terrain de Football</span>
                   </div>
                   <div class="info-row">
                     <i class="bi bi-people"></i>
-                    <span>45 Projects</span>
-                  </div>
-                </div>
-                <div class="event-footer">
-                  <a href="#" class="register-btn">Register Now</a>
-                  <div class="event-share">
-                    <i class="bi bi-share"></i>
-                    <i class="bi bi-heart"></i>
+                    <span>8 équipes participantes</span>
                   </div>
                 </div>
               </div>
@@ -553,33 +525,26 @@
           <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
             <div class="event-item">
               <div class="event-image">
-                <img src="assets/img/education/events-8.webp" alt="Community Event" class="img-fluid">
+                <img src="{{asset('assets/img/activities/basketball.jpg')}}" alt="Match de Basketball" class="img-fluid">
                 <div class="event-date-overlay">
-                  <span class="date">MAY<br>15</span>
+                  <span class="date">MAI<br>15</span>
                 </div>
               </div>
               <div class="event-details">
                 <div class="event-category">
-                  <span class="badge community">Community</span>
-                  <span class="event-time">3:00 PM</span>
+                  <span class="badge sports">Match de Basketball</span>
+                  <span class="event-time">15:00</span>
                 </div>
-                <h3>Family Fun Day Celebration</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                <h3>Finale du Championnat de Basketball</h3>
+                <p>Match décisif pour le titre de champion de basketball. Nos équipes s'affrontent dans une ambiance électrique et compétitive.</p>
                 <div class="event-info">
                   <div class="info-row">
                     <i class="bi bi-geo-alt"></i>
-                    <span>School Playground Area</span>
+                    <span>Salle de Basketball</span>
                   </div>
                   <div class="info-row">
                     <i class="bi bi-people"></i>
-                    <span>All Families</span>
-                  </div>
-                </div>
-                <div class="event-footer">
-                  <a href="#" class="register-btn">Register Now</a>
-                  <div class="event-share">
-                    <i class="bi bi-share"></i>
-                    <i class="bi bi-heart"></i>
+                    <span>Équipes 7ème et 8ème</span>
                   </div>
                 </div>
               </div>
@@ -589,33 +554,26 @@
           <div class="col-lg-4 col-md-6 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="400">
             <div class="event-item">
               <div class="event-image">
-                <img src="assets/img/education/events-6.webp" alt="Music Concert" class="img-fluid">
+                <img src="{{asset('assets/img/activities/athletics.jpg')}}" alt="Compétition d'Athlétisme" class="img-fluid">
                 <div class="event-date-overlay">
-                  <span class="date">JUN<br>02</span>
+                  <span class="date">JUIN<br>02</span>
                 </div>
               </div>
               <div class="event-details">
                 <div class="event-category">
-                  <span class="badge arts">Arts</span>
-                  <span class="event-time">7:30 PM</span>
+                  <span class="badge sports">Compétition d'Athlétisme</span>
+                  <span class="event-time">08:00</span>
                 </div>
-                <h3>Summer Music Concert Finale</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                <h3>Championnat d'Athlétisme</h3>
+                <p>Compétition d'athlétisme avec épreuves de course, saut et lancer. Découvrez les talents de nos jeunes athlètes et encouragez-les.</p>
                 <div class="event-info">
                   <div class="info-row">
                     <i class="bi bi-geo-alt"></i>
-                    <span>Music Hall Theater</span>
+                    <span>Piste d'Athlétisme</span>
                   </div>
                   <div class="info-row">
                     <i class="bi bi-people"></i>
-                    <span>300 Seats</span>
-                  </div>
-                </div>
-                <div class="event-footer">
-                  <a href="#" class="register-btn">Register Now</a>
-                  <div class="event-share">
-                    <i class="bi bi-share"></i>
-                    <i class="bi bi-heart"></i>
+                    <span>Tous les niveaux</span>
                   </div>
                 </div>
               </div>
@@ -628,17 +586,16 @@
           <div class="row align-items-center">
             <div class="col-md-8">
               <div class="filter-tabs">
-                <button class="filter-tab active" data-filter="all">All Events</button>
-                <button class="filter-tab" data-filter="academic">Academic</button>
+                <button class="filter-tab active" data-filter="all">Tous les Événements</button>
                 <button class="filter-tab" data-filter="sports">Sports</button>
-                <button class="filter-tab" data-filter="arts">Arts</button>
-                <button class="filter-tab" data-filter="community">Community</button>
+                <button class="filter-tab" data-filter="arts">Arts & Culture</button>
+                <button class="filter-tab" data-filter="academic">Académique</button>
               </div>
             </div>
             <div class="col-md-4 text-end">
-              <a href="#" class="view-calendar-btn">
-                <i class="bi bi-calendar3"></i>
-                View Calendar
+              <a href="{{ route('students-life') }}" class="view-calendar-btn">
+                <i class="bi bi-calendar-event me-2"></i>
+                Voir tous les événements
               </a>
             </div>
           </div>
