@@ -24,6 +24,10 @@ class FrontController extends Controller
     {
         return view('front.students-life', ['title' => 'Vie scolaire']);
     }
+    public function event()
+    {
+        return view('front.event', ['title' => 'Événements']);
+    }
     public function preschool()
     {
         return view('front.preschool', ['title' => 'Crèche & Maternelle']);

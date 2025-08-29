@@ -720,7 +720,7 @@
               </div>
             </div>
             <div class="col-md-4 text-end">
-              <a href="{{ route('students-life') }}" class="view-calendar-btn">
+              <a href="{{ route('event') }}" class="view-calendar-btn">
                 <i class="bi bi-calendar-event me-2"></i>
                 Voir tous les événements
               </a>

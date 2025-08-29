@@ -8,17 +8,18 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
 Route::get('/', [FrontController::class, 'home'])->name('home');
-Route::get('/about', [FrontController::class, 'about'])->name('about');
-Route::get('/students-life', [FrontController::class, 'studentLife'])->name('students-life');
-Route::get('/students-life', [FrontController::class, 'studentLife'])->name('students-life');
-Route::get('education-levels/preschool', [FrontController::class, 'preschool'])->name('education-levels.preschool');
-Route::get('education-levels/primary-shool', [FrontController::class, 'primary'])->name('education-levels.primary');
-Route::get('education-levels/high-School', [FrontController::class, 'highSchool'])->name('education-levels.high-school');
+Route::get('/a-propos', [FrontController::class, 'about'])->name('about');
+Route::get('/vie-scolaire', [FrontController::class, 'studentLife'])->name('students-life');
+Route::get('/evenements', [FrontController::class, 'event'])->name('event');
+
+Route::get('niveaux-enseignement/creche-maternelle', [FrontController::class, 'preschool'])->name('education-levels.preschool');
+Route::get('niveaux-enseignement/primaire', [FrontController::class, 'primary'])->name('education-levels.primary');
+Route::get('niveaux-enseignement/secondaire', [FrontController::class, 'highSchool'])->name('education-levels.high-school');
+
 Route::post('/contact', [FrontController::class, 'contact'])->name('contact.send');
 Route::post('/newsletter', [FrontController::class, 'newsletter'])->name('newsletter.store');
-
-
 
 
 Route::middleware('auth')->group(function () {

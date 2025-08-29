@@ -10,7 +10,7 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="{{ route('home') }}" class="active">Acceuil</a></li>
+          <li><a href="{{ route('home') }}" class="active">Accueil</a></li>
           <li><a href="{{ route('about') }}">À propos</a></li>
           <li class="dropdown"><a href="#"><span>Niveaux d’Enseignement</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
@@ -21,6 +21,7 @@
             </ul>
           </li>
           <li><a href="{{ route('students-life') }}">Vie scolaire</a></li>
+          <li><a href="{{ route('event') }}">Événements</a></li>
           <li><a href="events.html">Galerie</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
