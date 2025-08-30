@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title') - {{ config('app.name') }}</title>
 
+    <meta name="description" content="@yield('meta_description', 'Messiah Christian College - Formation d’excellence pour votre avenir')">
+    <meta name="keywords" content="@yield('meta_keywords', 'Messiah Christian College, éducation, université chrétienne, école supérieure')">
+    <meta name="author" content="Messiah Christian College">
+
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <meta property="og:title" content="@yield('og_title', config('app.name'))">
+    <meta property="og:description" content="@yield('og_description', 'Découvrez Messiah Christian College, votre partenaire académique')">
+    <meta property="og:image" content="@yield('og_image', asset('assets/img/logo-MCC.png'))">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('twitter_title', config('app.name'))">
+    <meta name="twitter:description" content="@yield('twitter_description', 'Découvrez Messiah Christian College')">
+    <meta name="twitter:image" content="@yield('twitter_image', asset('assets/img/logo-MCC.png'))">
+
      <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -13,6 +31,7 @@
     <!-- Template Front CSS -->
     <link rel="stylesheet" href="{{asset('assets/front/plugins/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{asset('assets/front/css/main.css') }}">
+    <link rel="stylesheet" href="{{asset('assets/front/css/custom-highlights.css') }}">
     <link rel="stylesheet" href="{{asset('assets/front/plugins/aos/aos.css') }}">
     <link rel="stylesheet" href="{{asset('assets/front/plugins/swiper/swiper-bundle.min.css') }}">
 

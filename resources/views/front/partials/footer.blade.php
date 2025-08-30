@@ -8,13 +8,13 @@
             <div class="col-lg-4 col-md-6 footer-about">
                 <a href="{{ url('/') }}" class="logo d-flex align-items-center mb-3" style="text-decoration: none;">
                     @if($school->logo)
-                        <img src="{{ asset('storage/' . $school->logo) }}" alt="logo MCC" class="footer-logo">
+                        <img src="{{ asset('storage/' . $school->logo) }}" alt="logo messiah christian college" class="footer-logo">
                     @else
-                        <img src="{{ asset('assets/img/logo-MCC.png') }}" alt="logo MCC" class="footer-logo">
+                        <img src="{{ asset('assets/img/logo-MCC.png') }}" alt="logo messiah christian college" class="footer-logo">
                     @endif
                     <div class="d-flex flex-column ms-2">
-                        <span class="school-line1">MESSIAH</span>
-                        <span class="school-line2">CHRISTIAN COLLEGE</span>
+                        <h2 class="school-line1">MESSIAH</h2>
+                        <h2 class="school-line2">CHRISTIAN COLLEGE</h2>
                     </div>
                 </a>
                 <div class="footer-contact pt-2">
@@ -32,7 +32,7 @@
                     @if($school->email)
                         <p><i class="bi bi-envelope-fill me-2"></i><span>{{ $school->email }}</span></p>
                     @else
-                        <p><i class="bi bi-envelope-fill me-2"></i><span>info@messiahchristiancollege.com</span></p>
+                        <p><i class="bi bi-envelope-fill me-2"></i><span>info@messiahchristiancollege.org</span></p>
                     @endif
                 </div>
                 <div class="social-links d-flex mt-3">
@@ -41,19 +41,19 @@
                     @else
                         <a href="https://www.facebook.com/profile.php?id=61578662350805" class="social-link facebook" target="_blank"><i class="bi bi-facebook"></i></a>
                     @endif
-                    
+
                     @if($school->social_links && isset($school->social_links['instagram']))
                         <a href="{{ $school->social_links['instagram'] }}" class="social-link instagram" target="_blank"><i class="bi bi-instagram"></i></a>
                     @else
                         <a href="https://www.instagram.com/ecolemessiahchristianmcc1?igsh=N3IybTFicHlkc2V4" class="social-link instagram" target="_blank"><i class="bi bi-instagram"></i></a>
                     @endif
-                    
+
                     @if($school->social_links && isset($school->social_links['linkedin']))
                         <a href="{{ $school->social_links['linkedin'] }}" class="social-link linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
                     @else
                         <a href="https://www.linkedin.com/feed/update/urn:li:activity:7358932188370726913" class="social-link linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
                     @endif
-                    
+
                     @if($school->social_links && isset($school->social_links['tiktok']))
                         <a href="{{ $school->social_links['tiktok'] }}" class="social-link tiktok" target="_blank"><i class="bi bi-tiktok"></i></a>
                     @else

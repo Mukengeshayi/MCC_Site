@@ -1,5 +1,7 @@
 @extends('layouts.front')
 
+@section('title', $title)
+
 @section('content')
   <section id="hero" class="hero section">
       <div class="hero-container">

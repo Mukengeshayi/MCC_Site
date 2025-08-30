@@ -1,5 +1,7 @@
 @extends('layouts.front')
 
+@section('title', $title)
+
 @section('content')
 <div>
     <div class="page-title position-relative" style="background-image: url(assets/img/st.png);">
