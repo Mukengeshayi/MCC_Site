@@ -167,75 +167,75 @@
 
 
     <section id="students-life-block" class="students-life-block section">
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-        <h2>Vie Scolaire</h2>
-        <p>Une école dynamique où les élèves s'épanouissent à travers diverses activités éducatives et culturelles.</p>
-    </div><!-- End Section Title -->
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Vie Scolaire</h2>
+            <p>Une école dynamique où les élèves s'épanouissent à travers diverses activités éducatives et culturelles.</p>
+        </div><!-- End Section Title -->
 
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row align-items-center gy-4">
-            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-                <div class="students-life-img position-relative">
-                    <img src="{{asset('assets/img/student.png')}}" class="img-fluid rounded-4 shadow-sm" alt="Vie scolaire MCC">
-                    <div class="img-overlay">
-                        <h3>Découvrez la vie dynamique de nos élèves</h3>
-                        <a href="{{ route('students-life') }}" class="explore-btn"> En savoir plus <i class="bi bi-arrow-right"></i></a>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+                    <div class="students-life-img position-relative">
+                        <img src="{{asset('assets/img/student.png')}}" class="img-fluid rounded-4 shadow-sm" alt="Vie scolaire MCC">
+                        <div class="img-overlay">
+                            <h3>Découvrez la vie dynamique de nos élèves</h3>
+                            <a href="{{ route('students-life') }}" class="explore-btn"> En savoir plus <i class="bi bi-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-                <div class="students-life-content">
-                    <div class="row g-4 mb-4">
-                        <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="simple-activity-card">
-                                <div class="card-icon">
-                                    <i class="bi bi-music-note-beamed"></i>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+                    <div class="students-life-content">
+                        <div class="row g-4 mb-4">
+                            <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="simple-activity-card">
+                                    <div class="card-icon">
+                                        <i class="bi bi-music-note-beamed"></i>
+                                    </div>
+                                    <h4>Clubs de Musique</h4>
+                                    <p>Développer le talent musical et l'expression artistique des élèves à travers la chorale et les instruments.</p>
                                 </div>
-                                <h4>Clubs de Musique</h4>
-                                <p>Développer le talent musical et l'expression artistique des élèves à travers la chorale et les instruments.</p>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                                <div class="simple-activity-card">
+                                    <div class="card-icon">
+                                        <i class="bi bi-water"></i>
+                                    </div>
+                                    <h4>Natation</h4>
+                                    <p>Apprentissage de la natation et compétitions aquatiques pour développer les compétences physiques.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="simple-activity-card">
+                                    <div class="card-icon">
+                                        <i class="bi bi-palette"></i>
+                                    </div>
+                                    <h4>Théâtre & Art</h4>
+                                    <p>Expression créative à travers le théâtre et les arts plastiques pour stimuler l'imagination.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="500">
+                                <div class="simple-activity-card">
+                                    <div class="card-icon">
+                                        <i class="bi bi-trophy"></i>
+                                    </div>
+                                    <h4>Activités Sportives</h4>
+                                    <p>Compétitions et tournois pour promouvoir la santé et l'esprit d'équipe chez nos élèves.</p>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="simple-activity-card">
-                                <div class="card-icon">
-                                    <i class="bi bi-water"></i>
-                                </div>
-                                <h4>Natation</h4>
-                                <p>Apprentissage de la natation et compétitions aquatiques pour développer les compétences physiques.</p>
-                            </div>
+                        <div class="students-life-cta" data-aos="fade-up" data-aos-delay="600">
+                            <a href="{{ route('students-life') }}" class="btn btn-primary">Voir toutes les activités scolaires</a>
                         </div>
-
-                        <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="simple-activity-card">
-                                <div class="card-icon">
-                                    <i class="bi bi-palette"></i>
-                                </div>
-                                <h4>Théâtre & Art</h4>
-                                <p>Expression créative à travers le théâtre et les arts plastiques pour stimuler l'imagination.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="500">
-                            <div class="simple-activity-card">
-                                <div class="card-icon">
-                                    <i class="bi bi-trophy"></i>
-                                </div>
-                                <h4>Activités Sportives</h4>
-                                <p>Compétitions et tournois pour promouvoir la santé et l'esprit d'équipe chez nos élèves.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="students-life-cta" data-aos="fade-up" data-aos-delay="600">
-                        <a href="{{ route('students-life') }}" class="btn btn-primary">Voir toutes les activités scolaires</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
    </section>
 
     <!-- Campus Gallery Section -->
