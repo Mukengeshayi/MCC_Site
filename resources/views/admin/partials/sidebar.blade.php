@@ -79,6 +79,31 @@
                     </a>
                 </li>
 
+                <!-- Student Life -->
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link {{ request()->is('admin/student-life*') ? 'active' : '' }}">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            Vie Étudiante
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('admin.student-life-categories.index') }}" class="nav-link {{ request()->is('admin/student-life-categories*') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Catégories</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('admin.student-life-items.index') }}" class="nav-link {{ request()->is('admin/student-life-items*') ? 'active' : '' }}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Éléments</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                 <!-- System Section -->
                 <li class="nav-header">SYSTÈME</li>
                 <li class="nav-item">

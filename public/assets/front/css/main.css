@@ -5595,10 +5595,6 @@ section,
   margin-right: 5px;
 }
 
-.campus-facilities .facilities-tabs .tab-content .facility-cards .facility-card:hover .icon-container {
-  background: var(--accent-color);
-}
-
 .campus-facilities .facilities-tabs .tab-content .facility-cards .facility-card:hover .icon-container i {
   color: var(--contrast-color);
 }
@@ -10397,11 +10393,6 @@ section,
   flex-grow: 1;
 }
 
-.academics .programs-content .program-item .program-body h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
-}
-
 .academics .programs-content .program-item .program-body p {
   font-size: 15px;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
@@ -11196,10 +11187,6 @@ section,
 .students-life .students-life-tabs .tab-content .support-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-}
-
-.students-life .students-life-tabs .tab-content .support-card:hover .icon {
-  background-color: var(--accent-color);
 }
 
 .students-life .students-life-tabs .tab-content .support-card:hover .icon i {
@@ -12109,10 +12096,6 @@ section,
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.campus-facilities .facilities-tabs .tab-content .facility-cards .facility-card:hover .icon-container {
-  background: var(--accent-color);
-}
-
 .campus-facilities .facilities-tabs .tab-content .facility-cards .facility-card:hover .icon-container i {
   color: var(--contrast-color);
 }
@@ -12792,22 +12775,6 @@ section,
   grid-template-columns: minmax(200px, 300px) 1fr;
   gap: 3rem;
   position: relative;
-}
-
-@media (max-width: 992px) {
-  .blog-details .article-wrapper {
-    grid-template-columns: 1fr;
-  }
-}
-
-.blog-details .article-wrapper .table-of-contents {
-  position: sticky;
-  top: 100px;
-  height: fit-content;
-  padding: 2rem;
-  background: var(--surface-color);
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 @media (max-width: 992px) {
@@ -14388,11 +14355,6 @@ section,
 
 .alumni .impact-banner .impact-image {
   position: relative;
-}
-
-.alumni .impact-banner .impact-image img {
-  border-radius: 15px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .alumni .impact-banner .impact-image .impact-stat {
@@ -16769,17 +16731,6 @@ section,
 .students-life-block .modern-activity-card .card-body p {
     flex: 1;
 }
-.modern-activity-card {
-    background: var(--surface-color);
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    padding: 20px;
-    height: 100%;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    position: relative;
-    overflow: hidden;
-}
 
 .modern-activity-card::before {
     content: '';
@@ -16960,5 +16911,142 @@ section,
     .modern-activity-card .activity-link {
         font-size: 13px;
         padding: 4px 0;
+    }
+}
+
+/* Styles pour les cartes simples de la section vie scolaire */
+.simple-activity-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.simple-activity-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #28a745, #ffc107, #dc3545);
+    background-size: 200% 100%;
+    animation: gradient-shift 3s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.simple-activity-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.simple-activity-card:hover .card-icon {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.simple-activity-card .card-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.simple-activity-card .card-icon i {
+    font-size: 1.25rem;
+    color: #007bff;
+    transition: all 0.3s ease;
+}
+
+.simple-activity-card:hover .card-icon i {
+    color: #fff;
+}
+
+.simple-activity-card h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.simple-activity-card p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
+
+
+/* Responsive design pour les cartes simples */
+@media (max-width: 768px) {
+    .simple-activity-card {
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .simple-activity-card .card-icon {
+        width: 45px;
+        height: 45px;
+        margin: 0 auto 0.5rem;
+    }
+
+    .simple-activity-card .card-icon i {
+        font-size: 1.1rem;
+    }
+
+    .simple-activity-card h4 {
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .simple-activity-card p {
+        font-size: 0.85rem;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .simple-activity-card {
+        padding: 0.6rem;
+    }
+
+    .simple-activity-card .card-icon {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto 0.4rem;
+    }
+
+    .simple-activity-card .card-icon i {
+        font-size: 1rem;
+    }
+
+    .simple-activity-card h4 {
+        font-size: 0.95rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .simple-activity-card p {
+        font-size: 0.8rem;
+        margin-bottom: 0;
     }
 }

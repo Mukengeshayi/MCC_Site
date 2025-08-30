@@ -19,5 +19,11 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        // Exécuter les seeders pour la vie étudiante
+        $this->call([
+            StudentLifeCategorySeeder::class,
+            StudentLifeItemSeeder::class,
+        ]);
     }
 }
