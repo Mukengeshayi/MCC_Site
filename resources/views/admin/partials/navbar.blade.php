@@ -7,7 +7,7 @@
             </a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="{{ route('dashboard') }}" class="nav-link">Tableau de bord</a>
+                            <a href="{{ route('admin.dashboard') }}" class="nav-link">Tableau de bord</a>
         </li>
     </ul>
 

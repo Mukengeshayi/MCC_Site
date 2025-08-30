@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\SchoolController;
+use App\Http\Controllers\Admin\EducationLevelController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -34,9 +35,9 @@ Route::get('/admin-access', function () {
 })->name('admin.access');
 
 // Route::prefix('admin')->middleware(['auth', 'verified'])->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/editor', [DashboardController::class, 'editor'])->name('admin.editor');
-    
+
     // Routes pour la gestion des écoles
     Route::resource('admin/schools', SchoolController::class)->names([
         'index' => 'admin.schools.index',
@@ -46,6 +47,17 @@ Route::get('/admin-access', function () {
         'edit' => 'admin.schools.edit',
         'update' => 'admin.schools.update',
         'destroy' => 'admin.schools.destroy',
+    ]);
+
+    // Routes pour la gestion des niveaux d'éducation
+    Route::resource('admin/education-levels', EducationLevelController::class)->names([
+        'index' => 'admin.education-levels.index',
+        'create' => 'admin.education-levels.create',
+        'store' => 'admin.education-levels.store',
+        'show' => 'admin.education-levels.show',
+        'edit' => 'admin.education-levels.edit',
+        'update' => 'admin.education-levels.update',
+        'destroy' => 'admin.education-levels.destroy',
     ]);
 // });
 

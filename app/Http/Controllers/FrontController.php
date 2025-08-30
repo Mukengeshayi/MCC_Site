@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\ContactMail;
 use App\Models\Newsletter;
+use App\Models\EducationLevel;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Mailable;
 use Illuminate\Support\Facades\Mail;
@@ -13,7 +14,13 @@ class FrontController extends Controller
 {
     public function home()
     {
-        return view('front.home', ['title' => 'Accueil']);
+        // Récupérer les niveaux d'éducation ordonnés par ordre d'affichage
+        $educationLevels = EducationLevel::orderBy('order')->get();
+
+        return view('front.home', [
+            'title' => 'Accueil - Messiah Christian College',
+            'educationLevels' => $educationLevels
+        ]);
     }
 
     public function about()

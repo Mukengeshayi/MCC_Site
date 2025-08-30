@@ -40,7 +40,7 @@
                         <button type="submit" class="btn btn-primary">
                             <i class="fas fa-save"></i> Enregistrer
                         </button>
-                        <a href="{{ route('dashboard') }}" class="btn btn-default float-right">
+                        <a href="{{ route('admin.dashboard') }}" class="btn btn-default float-right">
                             Annuler
                         </a>
                     </div>

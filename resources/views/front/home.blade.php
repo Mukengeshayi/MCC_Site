@@ -2,6 +2,20 @@
 
 @section('title', $title)
 
+@section('meta_description', 'Messiah Christian College - École d\'excellence à Kinshasa. Découvrez nos niveaux d\'éducation : Crèche & Maternelle, Primaire, Secondaire et Humanités. Formation de qualité avec valeurs chrétiennes.')
+
+@section('meta_keywords', 'Messiah Christian College, école Kinshasa, crèche maternelle, primaire, secondaire, humanités, éducation RDC, école chrétienne, formation excellence')
+
+@section('og_title', 'Messiah Christian College - Former aujourd\'hui les leaders de demain')
+
+@section('og_description', 'Découvrez Messiah Christian College, école d\'excellence à Kinshasa. Nos niveaux d\'éducation de la crèche aux humanités, avec un enseignement de qualité et des valeurs chrétiennes.')
+
+@section('og_image', asset('assets/img/logo-mcc.png'))
+
+@section('twitter_title', 'Messiah Christian College - École d\'excellence à Kinshasa')
+
+@section('twitter_description', 'Formation de qualité de la crèche aux humanités. Découvrez nos programmes éducatifs et nos valeurs chrétiennes.')
+
 @section('content')
   <section id="hero" class="hero section">
       <div class="hero-container">
@@ -29,58 +43,35 @@
       </div>
       <div class="highlights-container container">
         <div class="row gy-4">
-          <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="highlight-item">
-              <div class="icon">
-                <i class="bi bi-emoji-heart-eyes-fill"></i>
-              </div>
-              <h3>Crèche & Maternelle <small class="d-block">(dès 9 mois)</small></h3>
-              <p>Éveil et développement des tout-petits dans un environnement sécurisé et stimulant pour leur épanouissement.</p>
-              <a href="{{route('education-levels.preschool')}}" class="card-link">
-                <span>Détail du programme</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-            <div class="highlight-item">
-              <div class="icon">
-                <i class="bi bi-pencil-fill"></i>
-              </div>
-              <h3>École Primaire</h3>
-              <p>Acquisition des fondamentaux avec un encadrement bienveillant et personnalisé pour chaque élève.</p>
-              <a href="{{route('education-levels.primary')}}" class="card-link">
-                <span>Détail du programme</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
-            <div class="highlight-item">
+          @forelse($educationLevels as $index => $level)
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="{{ ($index + 1) * 100 }}">
+              <div class="highlight-item">
                 <div class="icon">
-                <i class="bi bi-journal-bookmark-fill"></i>
+                  <i class="bi {{ $level->icon }}"></i>
                 </div>
-                <h3>Secondaire <small class="d-block">(7ème EB - 8ème CTEB)</small></h3>
-                <p>Programme complet préparant aux humanités avec développement des compétences clés et orientation.</p>
-                <a href="{{route('education-levels.high-school')}}" class="card-link">
+                <h3>
+                  {{ $level->name }}
+                  @if($level->subtitle)
+                    <small class="d-block">{{ $level->subtitle }}</small>
+                  @endif
+                </h3>
+                <p>{{ Str::limit($level->description, 120) }}</p>
+                <a href="{{ $level->route }}" class="card-link"
+                   title="Découvrir le programme {{ $level->name }} - Messiah Christian College"
+                   aria-label="En savoir plus sur {{ $level->name }}">
                   <span>Détail du programme</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
-            </div>
-          </div>
-          <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
-            <div class="highlight-item">
-              <div class="icon">
-                <i class="bi bi-mortarboard-fill"></i>
               </div>
-              <h3>Humanités</h3>
-              <p>Orientation Sciences, Littéraire, Commerciale ou Informatique avec accompagnement expert et suivi personnalisé.</p>
-              <a href="{{route('education-levels.high-school')}}" class="card-link">
-                <span>Détail du programme</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
             </div>
-          </div>
+          @empty
+            <div class="col-12 text-center">
+              <div class="alert alert-info">
+                <i class="bi bi-info-circle"></i>
+                Les niveaux d'éducation seront bientôt disponibles.
+              </div>
+            </div>
+          @endforelse
         </div>
       </div>
        <div class="event-banner" data-aos="fade-up" data-aos-delay="500">

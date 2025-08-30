@@ -39,6 +39,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset('assets/front/plugins/bootstrap-icons/bootstrap-icons.css') }}">
 
+    @stack('head')
 </head>
 <body class="index-page" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-delay="0">
     @include('front.partials.header')
